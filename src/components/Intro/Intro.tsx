@@ -7,7 +7,7 @@ function Intro() {
         <h1 className="text-5xl">I'm João and I'm a</h1>
         <h1
         className="text-7xl text-white flex-1 text-wrap ">Full Stack Web Developer</h1>
-        <p>I like creating</p>
+        <p>I love creating </p>
       </div>
       <div 
       className="relative pointer-events-none">
@@ -26,5 +26,3 @@ function Intro() {
 }
 
 export default Intro;
-
-// 

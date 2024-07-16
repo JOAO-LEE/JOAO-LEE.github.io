@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .nav-item {
+    @apply tracking-tighter relative cursor-pointer duration-[600ms]
+  }
+  
+  .nav-item::after {
+    @apply content-[''] bg-[#00061d] h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-1000 ease-in-out
+  }
+
+  .nav-item:hover {
+    @apply scale-105 tracking-widest
+  }
+  
+  .nav-item:hover::after {
+    @apply w-[100%] bg-[#2b52ff]
+  }
+}
+
+.glow-item:hover {
+  text-shadow: 2px 5px 10px black;
+  transition: all 600ms ease-in-out;
+}

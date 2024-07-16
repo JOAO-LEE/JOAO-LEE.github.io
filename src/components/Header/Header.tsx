@@ -34,12 +34,12 @@ export function Header() {
           alt="Logo João Lee"
           className="size-10 bg-slate-200 rounded-full lg:order-0 lg:size-14"
         />
-        <nav className="hidden lg:flex list-none gap-5 w-fit uppercase">
-          <li>Home</li>
-          <li>GitHub</li>
-          <li>Linkedin</li>
+        <nav className="hidden lg:flex list-none gap-5 w-fit uppercase relative">
+          <li className="nav-item glow-item">Home</li>
+          <li className="nav-item glow-item">GitHub</li>
+          <li className="nav-item glow-item">Linkedin</li>
         </nav>
-        <Sun className="cursor-pointer" size={32} />
+        <Sun className="cursor-pointer hover:scale-110 duration-500 hover:animate-spin" size={32} />
       </header>
     </>
   );
