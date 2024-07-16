@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <>
-      <div ref={menuRef} className={`menu ${open ? "open" : "close"}  lg:hidden bg-white h-screen`}>
+      <div ref={menuRef} className={`menu ${open ? "open" : "close"} lg:hidden h-screen from-[#1d40d8] via-black to-white bg-gradient-to-bl text-white`}>
         <X className={`size-10 ${open ? "x-open" : "x-close"}`} onClick={openCloseMenu} />
         <nav className="menu-navigation">
           <li>GitHub</li>
