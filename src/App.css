@@ -1,14 +1,19 @@
 :root {
   --bgGradientBlack: #00061d;
-  --bgGradientPurple: #1a2a70;
+  --bgGradientPurple: #1d40d8;
   --typewriterSpeed: 4s;
 }
 
 body {
+  font-family: "Unbounded", sans-serif;
   background: linear-gradient(270deg, var(--bgGradientBlack) 0%, var(--bgGradientPurple) 100%);
   margin: 0px;
   padding: 0px;
   height: 100vh;
+}
+
+.text-intro {
+  font-weight: 400;
 }
 
 .typewriter {
@@ -19,7 +24,7 @@ body {
   text-align: center;
   min-height: 100vh;
   background-color: var(--bgGradientBlack);
-  animation: slide-out-greeting 1s 9s ease-in forwards;
+  animation: fade-out-block 1s 9s ease-in forwards;
   position: absolute;
   width: 100%;
   top: 0;
@@ -54,12 +59,12 @@ body {
     typewriter var(--typewriterSpeed) steps(20) 1s forwards, blink 850ms steps(24) infinite;
 }
 
-@keyframes slide-out-greeting {
+@keyframes fade-out-block {
   to {
-    opacity: 0
+    opacity: 0;
+    display: none;
   }
 }
-
 
 @keyframes typewriter {
   to {
@@ -80,7 +85,7 @@ body {
   font-weight: 400;
   opacity: 0;
   transform: translateY(1rem);
-  animation: fade-in-text 2s 5s ease-in forwards;
+  animation: fade-in-text 2s 5s ease-in-out forwards;
 }
 
 @keyframes fade-in-text {
@@ -131,7 +136,6 @@ body {
 .x-close {
   animation: x-spin-close 1000ms ease-in-out forwards;
 }
-
 
 @keyframes x-spin-open {
   from {
