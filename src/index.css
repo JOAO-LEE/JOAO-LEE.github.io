@@ -4,23 +4,46 @@
 
 @layer utilities {
   .nav-item {
-    @apply tracking-tighter relative cursor-pointer duration-[600ms]
+    @apply relative cursor-pointer duration-[600ms]
   }
   
   .nav-item::after {
     @apply content-[''] bg-[#00061d] h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-1000 ease-in-out
   }
 
-  .nav-item:hover {
-    @apply scale-105 tracking-widest
+  /* .nav-item:hover {
+    @apply scale-[1.025]
   }
-  
+   */
   .nav-item:hover::after {
     @apply w-[100%] bg-[#2b52ff]
   }
 }
 
 .glow-item:hover {
-  text-shadow: 2px 5px 10px black;
-  transition: all 600ms ease-in-out;
+  transition: all 600ms cubic-bezier(.09,.26,.24,.79);
+}
+
+.navigation-links {
+  animation: navigation-links-fade 2.5s cubic-bezier(.09,.26,.24,.79) var(--introAnimationDelay) forwards;
+  opacity: 0;
+  width: fit-content;
+  list-style-type: none;
+  display: flex;
+  gap: 0;
+  position: relative;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.navigation-links::after {
+  content: "";
+}
+
+@keyframes navigation-links-fade {
+  to {
+    opacity: 1;
+    gap: 1.25rem;
+    font-weight: 400;
+  }
 }

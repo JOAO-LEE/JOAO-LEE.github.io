@@ -1,0 +1,75 @@
+.intro {
+  color: var(--bgGradientBlack);
+  overflow: hidden;
+}
+
+.text-intro {
+  font-weight: 400;
+}
+
+.greeting-container {
+  transform: perspective(1000px) translateZ(48rem);
+  opacity: 0;
+  animation: greeting-three-dee 1.5s ease-in-out var(--introAnimationDelay) forwards;
+}
+
+.greeting-container h1:nth-child(2) {
+  color: var(--bgGradientBlack);
+  animation: job-text-decoration 2s ease-in-out var(--introAnimationDelay) forwards;
+  position: relative;
+  letter-spacing: 0.25rem;
+  filter: blur(1.25rem);
+  text-shadow: none;
+}
+
+@keyframes job-text-decoration {
+  to {
+    letter-spacing: 0;
+    filter: blur(0);
+  }
+}
+
+.greeting-image {
+  position: relative;
+}
+
+.greeting-image div {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  bottom: 50%;
+  opacity: 0;
+  animation: photograph-in 2s ease-in 10s forwards;
+}
+
+@keyframes photograph-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes greeting-three-dee {
+  to {
+    color: white;
+    transform: none;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.circle-pattern {
+transform: perspective(500px) translateZ(-50rem) rotateZ(22.5deg);
+filter: brightness(0.5) blur(1rem) saturate(0);
+opacity: 0;
+animation: circle-pattern-roll 2s ease-in-out var(--introAnimationDelay) forwards;
+}
+
+@keyframes circle-pattern-roll {
+  to {
+    transform: none;
+    filter: none;
+    opacity: 1;
+  }
+}
