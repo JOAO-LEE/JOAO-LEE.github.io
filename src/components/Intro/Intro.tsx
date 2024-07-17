@@ -14,14 +14,14 @@ function Intro() {
         <img 
         src="src/assets/photo-bg-pattern.png"
         alt=""
-        className="object-contain relative h-[40rem] w-[40rem] circle-pattern"
+        className="object-contain h-[40rem] w-[40rem] circle-pattern"
         />
-        {/* <div className="">
+        <div>
           <img 
           src="src/assets/foto_sem_texto (cópia).jpg" 
           alt=""
-          className="object-cover rounded-md size-80 h-56 w-56 lg:h-96 lg:w-96 shadow-indigo-950 shadow-2xl"/>
-        </div> */}
+          className="object-cover rounded-3xl h-56 w-56 lg:h-96 lg:w-96 shadow-indigo-950 shadow-2xl photograph"/>
+        </div>
       </div>
     </section>
   )

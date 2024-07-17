@@ -19,13 +19,30 @@ body {
 
 .greeting-container {
   transform: perspective(1000px) translateZ(48rem);
-  animation: greeting-three-dee 1.3s ease-in-out 8s forwards;
+  animation: greeting-three-dee 1.5s ease-in-out 8s forwards;
   opacity: 0;
   filter: blur(1.25rem);
 }
 
 .greeting-image {
   position: relative;
+}
+
+.greeting-image div {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  left: 50%;
+  bottom: 50%;
+  opacity: 0;
+  animation: photograph-in 2s ease-in 10s forwards;
+}
+
+@keyframes photograph-in {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes greeting-three-dee {
@@ -38,7 +55,6 @@ body {
 }
 
 .circle-pattern {
-  position: absolute;
   transform: perspective(500px) translateZ(-50rem) rotateZ(22.5deg);
   filter: brightness(0.5) blur(1rem) saturate(0);
   opacity: 0;
