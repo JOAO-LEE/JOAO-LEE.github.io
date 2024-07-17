@@ -12,6 +12,47 @@ body {
   height: 100vh;
 }
 
+.intro {
+  color: var(--bgGradientBlack);
+  overflow: hidden;
+}
+
+.greeting-container {
+  transform: perspective(1000px) translateZ(48rem);
+  animation: greeting-three-dee 1.3s ease-in-out 8s forwards;
+  opacity: 0;
+  filter: blur(1.25rem);
+}
+
+.greeting-image {
+  position: relative;
+}
+
+@keyframes greeting-three-dee {
+  to {
+    color: white;
+    transform: none;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.circle-pattern {
+  position: absolute;
+  transform: perspective(500px) translateZ(-50rem) rotateZ(22.5deg);
+  filter: brightness(0.5) blur(1rem) saturate(0);
+  opacity: 0;
+  animation: circle-pattern-roll 2s ease-in-out 8s forwards;
+}
+
+@keyframes circle-pattern-roll {
+  to {
+    transform: none;
+    filter: none;
+    opacity: 1;
+  }
+}
+
 .text-intro {
   font-weight: 400;
 }
@@ -125,6 +166,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  /* min-height: max-content; */
   font-size: 2rem;
 }
 
