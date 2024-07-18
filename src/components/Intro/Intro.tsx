@@ -16,7 +16,7 @@ function Intro() {
         <img 
         src="src/assets/photo-bg-pattern.png"
         alt=""
-        className="object-contain h-[40rem] w-[40rem] circle-pattern"
+        className="object-contain lg:h-[40rem] lg:w-[40rem] circle-pattern"
         />
         <div>
           <img 

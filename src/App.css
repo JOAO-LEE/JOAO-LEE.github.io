@@ -21,7 +21,7 @@ body {
   text-align: center;
   min-height: 100vh;
   background-color: var(--bgGradientBlack);
-  animation: fade-out-block 1s 9s ease-in forwards;
+  animation: fade-out-block 1s ease-in 7s forwards;
   position: absolute;
   width: 100%;
   top: 0;
@@ -53,7 +53,7 @@ body {
   width: 0.125em;
   background-color: white;
   animation:
-    typewriter var(--typewriterSpeed) steps(20) 1s forwards, blink 850ms steps(24) infinite;
+    typewriter var(--typewriterSpeed) steps(20) 1s forwards, blink 850ms steps(24) 200ms infinite;
 }
 
 @keyframes fade-out-block {
@@ -82,7 +82,7 @@ body {
   font-weight: 400;
   opacity: 0;
   transform: translateY(1rem);
-  animation: fade-in-text 2s 5s ease-in-out forwards;
+  animation: fade-in-text 1.5s ease-in-out 5s forwards;
 }
 
 @keyframes fade-in-text {

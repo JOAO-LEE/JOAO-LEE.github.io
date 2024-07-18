@@ -15,22 +15,25 @@
 
 .greeting-container h1:nth-child(2) {
   color: var(--bgGradientBlack);
-  animation: job-text-decoration 2s ease-in-out var(--introAnimationDelay) forwards;
   position: relative;
   letter-spacing: 0.25rem;
   filter: blur(1.25rem);
-  text-shadow: none;
+  animation: job-text-decoration 2s ease-in-out var(--introAnimationDelay) forwards;
 }
 
 @keyframes job-text-decoration {
   to {
     letter-spacing: 0;
+    
+    font-weight: 200;
+    color: white;
     filter: blur(0);
   }
 }
 
 .greeting-image {
   position: relative;
+  width: fit-content;
 }
 
 .greeting-image div {
