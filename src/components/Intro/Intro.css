@@ -7,19 +7,71 @@
   font-weight: 400;
 }
 
-.greeting-container {
+.greeting-container  {
   transform: perspective(1000px) translateZ(48rem);
   opacity: 0;
   animation: greeting-three-dee 1.5s ease-in-out var(--introAnimationDelay) forwards;
 }
 
 .greeting-container h1:nth-child(2) {
+  font-size: 2rem;
   color: var(--bgGradientBlack);
   position: relative;
   letter-spacing: 0.10rem;
   filter: blur(1.25rem);
   animation: job-text-decoration 2s ease-in-out var(--introAnimationDelay) forwards;
 }
+
+.greeting-container h1:nth-child(2)::after {
+  content: "";
+  width: 0;
+  height: 0.25rem;
+  background-image: linear-gradient(45deg, var(--bgGradientBlack), var(--bgGradientPurple));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: job-description-underline-grow 4s ease-in-out 8s forwards;
+  opacity: 1
+}
+
+@keyframes job-description-underline-grow {
+  from {
+    width: 0;
+  }
+  to {
+
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes job-description-underline-shrink {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* @keyframes job-description-underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+} */
+
 
 @keyframes job-text-decoration {
   to {
@@ -43,12 +95,10 @@
   bottom: 50%;
   filter: blur(1rem);
   opacity: 0;
-
   animation: photograph-in 3s ease-in 9s forwards;
 }
 
 .circle-pattern {
-  /* object-fit: cover; */
   transform: perspective(500px) translateZ(-50rem) rotateZ(22.5deg);
   filter: brightness(0.5) blur(1rem) saturate(0);
   opacity: 0;
@@ -88,6 +138,10 @@
   .photograph {
     width: 20rem;
     height: 20rem;
+  }
+
+  .greeting-container h1:nth-child(2) {
+    font-size: 4rem;
   }
 
   .circle-pattern {
