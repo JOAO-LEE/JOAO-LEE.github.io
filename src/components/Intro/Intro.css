@@ -16,7 +16,7 @@
 .greeting-container h1:nth-child(2) {
   color: var(--bgGradientBlack);
   position: relative;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.10rem;
   filter: blur(1.25rem);
   animation: job-text-decoration 2s ease-in-out var(--introAnimationDelay) forwards;
 }
@@ -24,7 +24,6 @@
 @keyframes job-text-decoration {
   to {
     letter-spacing: 0;
-    
     font-weight: 200;
     color: white;
     filter: blur(0);
@@ -33,7 +32,6 @@
 
 .greeting-image {
   position: relative;
-  width: fit-content;
 }
 
 .greeting-image div {
@@ -43,13 +41,29 @@
   transform: translate(-50%, 50%);
   left: 50%;
   bottom: 50%;
+  filter: blur(1rem);
   opacity: 0;
-  animation: photograph-in 2s ease-in 10s forwards;
+
+  animation: photograph-in 3s ease-in 9s forwards;
+}
+
+.circle-pattern {
+  /* object-fit: cover; */
+  transform: perspective(500px) translateZ(-50rem) rotateZ(22.5deg);
+  filter: brightness(0.5) blur(1rem) saturate(0);
+  opacity: 0;
+  animation: circle-pattern-roll 2s ease-in-out var(--introAnimationDelay) forwards;
+}
+
+.photograph {
+  width: 15rem;
+  height: 15rem;
 }
 
 @keyframes photograph-in {
   to {
     opacity: 1;
+    filter: blur(0);
   }
 }
 
@@ -62,17 +76,23 @@
   }
 }
 
-.circle-pattern {
-transform: perspective(500px) translateZ(-50rem) rotateZ(22.5deg);
-filter: brightness(0.5) blur(1rem) saturate(0);
-opacity: 0;
-animation: circle-pattern-roll 2s ease-in-out var(--introAnimationDelay) forwards;
-}
-
 @keyframes circle-pattern-roll {
   to {
     transform: none;
     filter: none;
     opacity: 1;
   }
+}
+
+@media (min-width: 1024px) {
+  .photograph {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .circle-pattern {
+    width: 35rem;
+    height: 35rem;
+  }
+  
 }
