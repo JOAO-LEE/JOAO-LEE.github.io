@@ -1,0 +1,80 @@
+.typewriter {
+  margin: 0;
+  font-family: "Source Code Pro", monospace;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  min-height: 100vh;
+  background-color: var(--bgGradientBlack);
+  animation: fade-out-block 1s ease-in 7s forwards;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.typewriter h1 {
+  color: white;
+  font-weight: 400;
+  font-size: clamp(1rem, 3vw + 1rem, 2.5rem);
+  position: relative;
+}
+
+.typewriter h1::after, .typewriter h1::before {
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.typewriter h1::before {
+  background-color: var(--bgGradientBlack);
+  animation: 
+    typewriter var(--typewriterSpeed) 1s steps(20) forwards;
+}
+
+.typewriter h1::after {
+  width: 0.125em;
+  background-color: white;
+  animation:
+    typewriter var(--typewriterSpeed) steps(20) 1s forwards, blink 850ms steps(24) 200ms infinite;
+}
+
+@keyframes fade-out-block {
+  to {
+    opacity: 0;
+    display: none;
+    filter: blur(1rem);
+  }
+}
+
+@keyframes typewriter {
+  to {
+    font-weight: 300;
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+
+.subtitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(1rem);
+  animation: fade-in-text 1.5s ease-in-out 5s forwards;
+}
+
+@keyframes fade-in-text {
+  to {
+    font-weight: 300;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
