@@ -1,5 +1,6 @@
 import { List, Sun, X } from "@phosphor-icons/react";
 import { useRef, useState } from "react";
+import './Header.css';
 
 export function Header() {
   const [open, setOpen] = useState<boolean>(false);
@@ -20,7 +21,7 @@ export function Header() {
 
   return (
     <>
-      <div ref={menuRef} className={`menu ${open ? "open" : "close"} lg:hidden h-dvh from-[#1d40d8] via-black to-white bg-gradient-to-tr text-white w-full`}>
+      <div ref={menuRef} className={`menu ${open ? "open" : "close"} lg:hidden h-dvh backdrop-blur-xl text-white w-full`}>
         <X className={`size-10 ${open ? "x-open" : "x-close"}`} onClick={openCloseMenu} />
         <nav className="menu-navigation">
           <li>GitHub</li>
