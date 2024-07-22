@@ -1,6 +1,6 @@
 import { List, Sun, X } from "@phosphor-icons/react";
-import { useEffect, useRef, useState } from "react";
-import './Header.css';
+import { useRef, useState } from "react";
+import "./Header.css";
 
 export function Header() {
   const [open, setOpen] = useState<boolean>(false);
@@ -21,13 +21,13 @@ export function Header() {
 
   return (
     <>
-      {/* <div ref={menuRef} className={`menu ${open ? "open" : "close"} lg:hidden h-dvh backdrop-blur-xl text-white w-full`}>
+      <div ref={menuRef} className={`menu ${open ? "open" : "close"} lg:hidden h-dvh backdrop-blur-xl text-white w-full`}>
         <X className={`size-10 ${open ? "x-open" : "x-close"}`} onClick={openCloseMenu} />
         <nav className="menu-navigation uppercase">
-          <li className="nav-item">GitHub</li>
-          <li className="nav-item">Linkedin</li>
+          <li className={`nav-item ${open ? "nav-item-fade" : ""}`}>GitHub</li>
+          <li className={`nav-item ${open ? "nav-item-fade" : ""}`}>Linkedin</li>
         </nav>
-      </div> */}
+      </div>
       <header className="flex justify-between items-center text-white p-4">
         <List size={32} className="lg:hidden cursor-pointer hamb-menu" onClick={openCloseMenu} />
         <img
@@ -41,7 +41,7 @@ export function Header() {
           <li className="nav-item glow-item">Linkedin</li>
         </nav>
         <Sun 
-        className={`cursor-pointer hover:scale-110 duration-500 hover:animate-spin test-animation ${open && "static"} theme-switch`} 
+        className={`cursor-pointer hover:scale-110 duration-500 test-animation ${open && "static"} theme-switch`} 
         size={32} />
       </header>
     </>

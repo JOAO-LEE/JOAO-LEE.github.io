@@ -70,6 +70,11 @@
   font-size: 2rem;
 }
 
+.nav-item-fade {
+  animation: general-fade 1s ease-in-out 800ms forwards;
+  opacity: 0;
+}
+
 .x-open {
   animation: x-spin-open 2000ms ease-in-out 500ms forwards;
   opacity: 0;
@@ -103,6 +108,7 @@
 
 .glow-item:hover {
   transition: all 600ms cubic-bezier(.09,.26,.24,.79);
+  /* background-color: ; */
 }
 
 .navigation-links {

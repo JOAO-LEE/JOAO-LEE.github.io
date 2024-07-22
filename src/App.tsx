@@ -11,10 +11,10 @@ function App() {
       {/* <Greeting /> */}
       <Main>
         <Intro />
+        
       </Main>
     </>
   )
-
 }
 
-export default App
+export default App;
