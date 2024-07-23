@@ -4,32 +4,40 @@
 
 @layer utilities {
   .nav-item {
-    @apply relative cursor-pointer duration-[600ms]
+    @apply relative cursor-pointer duration-[500ms]
+  }
+
+  .nav-item:hover {
+    @apply text-whitey
   }
   
+  
   .nav-item::after {
-    @apply content-[''] bg-[#00061d] h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-1000 ease-in-out
+    @apply content-[''] bg-whitey h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-1000 ease-in-out
   }
 
   .nav-item:hover::after {
-    @apply w-[100%] bg-[#2b52ff]
+    @apply w-[100%] bg-clear-orangeish
   }
 }
 
 .hamb-menu {
   opacity: 0;
-  animation: general-fade 1s ease-in-out 8s forwards;
-}
-
-.joaolee-logo {
-  opacity: 0;
-  animation: general-fade 1s ease-in-out 8s forwards;
+  animation: general-fade 1s ease-in-out 500ms forwards;
 }
 
 .theme-switch {
   opacity: 0;
-  animation: general-fade 1s ease-in-out 8s forwards;
+  animation: general-fade 1s ease-in-out 500ms forwards;
+  transition-duration: 1s;
 }
+
+.theme-switch:hover {
+ 
+ text-shadow: 
+  
+}
+
 
 @keyframes general-fade {
   to {
@@ -76,6 +84,7 @@
 }
 
 .x-open {
+  color: var(--clearOrangeish);
   animation: x-spin-open 2000ms ease-in-out 500ms forwards;
   opacity: 0;
 }
@@ -92,6 +101,7 @@
   to {
     transform: rotate(180deg) scale(1);
     opacity: 1;
+    color: var(--whitey)
   }
 }
 
@@ -103,12 +113,13 @@
   to {
     transform: rotate(0deg) scale(0.5);
     opacity: 0.5;
+    color: var(--clearOrangeish);
+
   }
 }
 
 .glow-item:hover {
   transition: all 600ms cubic-bezier(.09,.26,.24,.79);
-  /* background-color: ; */
 }
 
 .navigation-links {
@@ -119,7 +130,7 @@
 @media (min-width: 1024px) {
   .navigation-links {
     visibility: initial;
-    color: var(--bgGradientBlack);
+    color: var(--clearOrangeish);
     opacity: 0;
     width: fit-content;
     list-style-type: none;
@@ -128,7 +139,7 @@
     position: relative;
     font-weight: 100;
     text-transform: uppercase;
-    animation: navigation-links-fade 2.5s cubic-bezier(.09,.26,.24,.79) var(--introAnimationDelay) forwards;
+    animation: navigation-links-fade 2.5s cubic-bezier(.09,.26,.24,.79) 500ms forwards;
   }
   
   .navigation-links::after {
@@ -137,14 +148,13 @@
     bottom: -5px;
     width: 0%;
     height: 0;
-    background-color: black;
-    background-image: linear-gradient(45deg, var(--bgGradientBlack), var(--bgGradientPurple));
-    animation: navigation-links-bar 2s ease 8s forwards;
+    background-image: linear-gradient(45deg, var(--purpleBlue), var(--clearOrangeish));
+    animation: navigation-links-bar 2s ease 500ms forwards;
   }
   
   @keyframes navigation-links-fade {
     to {
-      color: white;
+      color: var(--orangeish);
       opacity: 1;
       gap: 1.25rem;
       font-weight: 400;

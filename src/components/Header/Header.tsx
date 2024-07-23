@@ -28,13 +28,15 @@ export function Header() {
           <li className={`nav-item ${open ? "nav-item-fade" : ""}`}>Linkedin</li>
         </nav>
       </div>
-      <header className="flex justify-between items-center text-white p-4">
+      <header className="flex justify-between items-center p-4">
         <List size={32} className="lg:hidden cursor-pointer hamb-menu" onClick={openCloseMenu} />
+        {/* <div className="rounded-full bg-clear-orangeish">
         <img
           src="src/assets/joaolee_logo-removebg-preview.png"
           alt="Logo João Lee"
-          className="size-10 bg-slate-200 rounded-full lg:order-0 lg:size-14 joaolee-logo"
+          className="size-10 lg:order-0 lg:size-14 joaolee-logo"
         />
+        </div> */}
         <nav  className="navigation-links">
           <li className="nav-item glow-item">Home</li>
           <li className="nav-item glow-item">GitHub</li>

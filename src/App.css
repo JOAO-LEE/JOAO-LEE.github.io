@@ -2,12 +2,21 @@
   --bgGradientBlack: #00061d;
   --bgGradientPurple: #1d40d8;
   --typewriterSpeed: 4s;
-  --introAnimationDelay: 8s
+  --introAnimationDelay: 8s;
+  --purpleBlue: #27187e;
+  --darkLilac: #758bfd;
+  --lilac: #aeb8fe;
+  --whitey: #f1f2f6;
+  --orangeish: #ff8600;
+  --clearOrangeish: #fb8500;
+  --generalDelay: 500ms;
+
 }
 
 body {
   font-family: "Unbounded", sans-serif;
-  background: linear-gradient(270deg, var(--bgGradientBlack) 0%, var(--bgGradientPurple) 100%);
+  color: var(--whitey);
+  background: linear-gradient(65deg, var(--purpleBlue) 50%, var(--darkLilac) 100%);
   margin: 0px;
   padding: 0px;
   height: 100vh;
