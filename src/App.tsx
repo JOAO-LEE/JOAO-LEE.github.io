@@ -13,6 +13,7 @@ function App() {
         <Intro />
         <Projects />
       </Main>
+      {/* <img src={"src/assets/up-arrow.png"} className='absolute size-80 up-arrow'/> */}
     </>
   )
 }

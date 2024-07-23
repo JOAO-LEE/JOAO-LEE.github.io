@@ -7,39 +7,53 @@
   font-weight: 400;
 }
 
+.mini-about {
+  color: var(--orangeish);
+  font-size: 1rem;
+  animation: mini-about-color-change 2s ease-in-out 500ms forwards;
+  font-weight: 600;
+}
+
+@keyframes mini-about-color-change {
+  to {
+    color: var(--lilac);
+    font-weight: 100;
+  }
+}
+
 .greeting-container  {
+  position: relative;
+  height: max-content;
   transform: perspective(1000px) translateZ(48rem);
   opacity: 0;
-  animation: greeting-three-dee 1.5s ease-in-out var(--introAnimationDelay) forwards;
+  animation: greeting-three-dee 1.5s ease-in-out var(--generalDelay) forwards;
 }
 
 .greeting-container h1:nth-child(2) {
-  font-size: 2rem;
-  color: var(--bgGradientBlack);
-  position: relative;
+  text-wrap: nowrap;
+  font-size: 1.36rem;
+  font-weight: 600;
+  color: var(--lilac);
   letter-spacing: 0.10rem;
-  filter: blur(1.25rem);
-  animation: job-text-decoration 2s ease-in-out var(--introAnimationDelay) forwards;
+  filter: blur(0.625rem);
+  animation: job-text-decoration 2s ease-in-out var(--generalDelay) forwards;
 }
 
 .greeting-container h1:nth-child(2)::after {
   content: "";
   width: 0;
   height: 0.25rem;
-  background-image: linear-gradient(45deg, var(--bgGradientBlack), var(--bgGradientPurple));
+  background-image: linear-gradient(235deg, var(--orangeish) 10%, var(--purpleBlue) 80%);
   position: absolute;
   bottom: 0;
   left: 0;
-  animation: job-description-underline-grow 4s ease-in-out 8.5s forwards;
+  animation: job-description-underline-grow 4s ease-in-out var(--generalDelay) forwards;
   opacity: 1
 }
 
 @keyframes job-description-underline-grow {
-  from {
-    width: 0;
-  }
   to {
-    filter: blur(0.125rem);
+    filter: blur(0.005rem);
     width: 100%;
     opacity: 0;
   }
@@ -58,46 +72,46 @@
   to {
     letter-spacing: 0;
     font-weight: 200;
-    color: white;
+    color: var(--orangeish);
     filter: blur(0);
   }
 }
 
 .greeting-image {
   position: relative;
+  padding: 2.5rem;
 }
 
-.greeting-image div {
-  position: absolute;
-  z-index: 3;
-  bottom: 0;
-  transform: translate(-50%, 50%);
-  left: 50%;
-  bottom: 50%;
-  filter: blur(1rem);
-  opacity: 0;
-  animation: photograph-in 3s ease-in 9s forwards;
-}
-
-.circle-pattern {
-  transform: perspective(500px) translateZ(-50rem) rotateZ(22.5deg);
-  filter: brightness(0.5) blur(1rem) saturate(0);
-  opacity: 0;
-  animation: circle-pattern-roll 2s ease-in-out var(--introAnimationDelay) forwards;
-  /* mix-blend-mode: color-burn; */
-}
-
-.photograph {
+.greeting-image figure {
+  margin: 0;
+  z-index: 1;
   width: 15rem;
   height: 15rem;
+  position: relative;
+  border: 0.115rem solid var(--clearOrangeish);
+  opacity: 0;
+  animation: show-image 2.5s ease-out 750ms forwards;
 }
 
-@keyframes photograph-in {
+.greeting-image .photograph {
+  width: 15rem;
+  height: 15rem;
+  margin-top: -10px;
+  margin-left: -15px;
+  filter: blur(.25rem);
+  opacity: 0;
+  animation: show-image 2.5s ease-in 500ms forwards;
+}
+
+@keyframes show-image {
   to {
+    filter: none;
     opacity: 1;
-    filter: blur(0);
+    border-radius: 10%;
+    border-color: var(--whitey)
   }
 }
+
 
 @keyframes greeting-three-dee {
   to {
@@ -108,27 +122,33 @@
   }
 }
 
-@keyframes circle-pattern-roll {
-  to {
-    transform: none;
-    filter: none;
-    opacity: 1;
-  }
-}
-
 @media (min-width: 1024px) {
-  .photograph {
+  .greeting-image figure {
     width: 20rem;
     height: 20rem;
   }
-
+  
+  .greeting-image .photograph {
+    width: 20rem;
+    height: 20rem;
+  }
   .greeting-container h1:nth-child(2) {
     font-size: 4rem;
   }
 
   .circle-pattern {
-    width: 35rem;
-    height: 35rem;
+    width: 32rem;
+    height: 32rem;
   }
-  
 }
+
+  /* border-inline-end: 2px solid;
+  border-block-end: 2px solid;
+  border-image-source: radial-gradient(circle at bottom right, transparent 15%, var(--lilac) 50% , var(--orangeish) 45%);
+  border-image-slice: 1; */
+
+ /* border-inline-start: 2px solid;
+  border-block-start: 2px solid;
+  padding: 2rem;
+  border-image-source: radial-gradient(ellipse at bottom left, transparent 55%, var(--lilac) 5% , var(--clearOrangeish) 60%);
+  border-image-slice: 1; */

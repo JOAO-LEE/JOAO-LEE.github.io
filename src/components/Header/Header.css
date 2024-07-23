@@ -8,12 +8,12 @@
   }
 
   .nav-item:hover {
-    @apply text-whitey
+    @apply text-lilac
   }
   
   
   .nav-item::after {
-    @apply content-[''] bg-whitey h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-1000 ease-in-out
+    @apply content-[''] bg-lilac h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-1000 ease-in-out
   }
 
   .nav-item:hover::after {
@@ -32,11 +32,11 @@
   transition-duration: 1s;
 }
 
-.theme-switch:hover {
+/* .theme-switch:hover {
  
  text-shadow: 
   
-}
+} */
 
 
 @keyframes general-fade {
@@ -109,11 +109,11 @@
   from {
     transform: rotate(180deg) scale(1);
     opacity: 1;
+    color: var(--clearOrangeish);
   }
   to {
     transform: rotate(0deg) scale(0.5);
     opacity: 0.5;
-    color: var(--clearOrangeish);
 
   }
 }
