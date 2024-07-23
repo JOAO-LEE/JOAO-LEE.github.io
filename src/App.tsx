@@ -3,15 +3,15 @@ import Greeting from './components/Greeting/Greeting';
 import Main from './components/Main/Main';
 import Intro from './components/Intro/Intro';
 import './App.css';
+import Projects from './components/Projects/Projects';
 
 function App() {
   return (
     <>
       <Header />
-      {/* <Greeting /> */}
       <Main>
         <Intro />
-        
+        <Projects />
       </Main>
     </>
   )
