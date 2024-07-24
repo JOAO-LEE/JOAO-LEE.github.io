@@ -1,14 +1,16 @@
 import './Projects.css';
-
+// flex justify-between items-center
 function Projects() {
   return (
-    
-    <section className='p-6'>
-      {/* <ul className="projects">
+    <section className='bg-orangeish'>
+      <div>
+        oi
+      </div>
+      <ul className="projects">
+        <li className="project">X Clone</li>
         <li className="project">Google Clone</li>
-        <li className="project">X-Clone</li>
         <li className="project">lamusiq</li>
-      </ul> */}
+      </ul>
     </section>
   )
 }

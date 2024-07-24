@@ -10,13 +10,11 @@
   --orangeish: #ff8600;
   --clearOrangeish: #fb8500;
   --generalDelay: 500ms;
-
 }
 
 body {
   font-family: "Unbounded", sans-serif;
   color: var(--whitey);
-  /* background: linear-gradient(65deg, var(--purpleBlue) 80%, var(--darkLilac) 100%); */
   background-color: var(--purpleBlue);
   margin: 0px;
   padding: 0px;
