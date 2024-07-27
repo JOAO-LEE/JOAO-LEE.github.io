@@ -1,4 +1,4 @@
-.projects {
+/* .projects {
   perspective: 600px;
   width: 50%;
   margin-right: 14px;
@@ -30,10 +30,10 @@
   transition-duration: .4s;
   /* background-color: var(--purpleBlue); */
 
-}
+/* } */
 /* rotateX(25deg); */
 
-@keyframes slideInFromTop {
+/* @keyframes slideInFromTop {
   from {
     -webkit-backface-visibility: hidden;
     -webkit-transform: translateY(-100%) scale(.5, 1.5);
@@ -46,4 +46,4 @@
     opacity: 1;
     filter: none
   }
-}
+} */ 

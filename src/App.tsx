@@ -13,6 +13,7 @@ function App() {
       <Main>
         <Intro />
         <About />
+        <Projects/>
       </Main>
     </>
   )

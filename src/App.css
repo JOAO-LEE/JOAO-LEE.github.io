@@ -4,6 +4,8 @@
   --typewriterSpeed: 4s;
   --introAnimationDelay: 8s;
   --purpleBlue: #27187e;
+  --darkPurpleBlue: #21146f;
+
   --darkLilac: #758bfd;
   --lilac: #aeb8fe;
   --whitey: #f1f2f6;
@@ -18,7 +20,35 @@ body {
   background-color: var(--purpleBlue);
   margin: 0px;
   padding: 0px;
-  height: 100vh;
   box-sizing: border-box;
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+ body::-webkit-scrollbar {
+  display: none;
+}
+
+ section {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+} 
+
+.hide {
+  opacity: 0;
+  filter: blur(2rem);
+  transform: translateY(-10rem);
+  transition: all 1s linear;
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  /* filter: blur(0); */
+  transform: translateY(0);
+  transition: all 1s linear;
+  transition-delay: 100ms;
 }

@@ -96,22 +96,25 @@
 .greeting-image .photograph {
   width: 15rem;
   height: 15rem;
-  margin-top: -10px;
-  margin-left: -15px;
-  filter: blur(.25rem);
+  margin-top: 0;
+  margin-left: 0;
+  filter: blur(.125rem) saturate(0);
   opacity: 0;
   animation: show-image 2.5s ease-in 500ms forwards;
 }
 
 @keyframes show-image {
   to {
+    width: 20rem;
+    height: 20rem;
+    margin-top: -25px;
+    margin-left: -25px;
     filter: none;
     opacity: 1;
     border-radius: 10%;
     border-color: var(--whitey)
   }
 }
-
 
 @keyframes greeting-three-dee {
   to {

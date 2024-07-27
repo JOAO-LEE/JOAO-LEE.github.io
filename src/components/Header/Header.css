@@ -52,7 +52,7 @@
   top: 0;
   left: -20rem;
   width: 0%;
-  height: 100vh;
+  height: 100dvh;
   z-index: 10;
   transition: left 1000ms ease-in-out, width 1000ms ease-in;
 }
@@ -114,7 +114,6 @@
   to {
     transform: rotate(0deg) scale(0.5);
     opacity: 0.5;
-
   }
 }
 

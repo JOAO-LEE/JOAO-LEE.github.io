@@ -11,7 +11,7 @@ function Intro() {
         <h1 className="text-3xl lg:text-4xl after:content-['.'] after:text-orangeish">based in Brazil</h1>
         <p className="mini-about after:content-['.'] after:text-whitey">Passionate for learning modern technologies and creating clean applications with</p>
       </div>
-      <div
+      {/* <div
       className="greeting-image">
         <figure>
           <img 
@@ -19,7 +19,7 @@ function Intro() {
           alt=""
           className="object-cover photograph"/>
         </figure>
-      </div>
+      </div> */}
     </section>
   )
 }

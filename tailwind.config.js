@@ -4,6 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        "dark-purple-blue": "#251679",
+        "darkest-purple-blue": "#21146f",
         "purple-blue": "#27187E",
         "dark-lilac": "#758BFD",
         lilac: "#AEB8FE",
