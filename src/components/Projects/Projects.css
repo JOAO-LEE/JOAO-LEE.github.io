@@ -1,49 +1,81 @@
-/* .projects {
-  perspective: 600px;
-  width: 50%;
-  margin-right: 14px;
-  animation: slideInFromTop 1s ease-out forwards;
-}
-
-.project {
-  font-size: 3vw;
-  font-weight: 400;
-  line-height: 6vw;
-  color: var(--purpleBlue);
-  text-align: right;
-  transform-origin: right;
-  transform: rotateY(-40deg);
-  transition-duration: .4s;
-  padding: 0.25rem;
-  transform-style: preserve-3d;
-}
-
-.project:hover {
-  font-weight: lighter;
-  transform-style: flat;
-  cursor: pointer;
+.projects-title {
+  position: relative;
   color: transparent;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--whitey);
-  transform: rotateY(-28deg) translateZ(0) scale(1.1); 
-  text-shadow: 2px 14px 20px var(--whitey);
-  transition-duration: .4s;
-  /* background-color: var(--purpleBlue); */
+  z-index: 1;
+  display: inline-block;
+  font-size: 45px;
+  filter: blur(.25rem);
+  animation: remove-blur-on-reveal 2.5s ease-in-out 250ms  forwards;
+}
 
-/* } */
-/* rotateX(25deg); */
+.projects-title::before {
+  content: "";
+  width: 100%;
+  height: 60px;
+  background-color: var(--purpleBlue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: blur(0);
+  animation: reveal-projects-title 5s ease-in-out 250ms forwards;
+}
 
-/* @keyframes slideInFromTop {
-  from {
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateY(-100%) scale(.5, 1.5);
-    opacity: .5;
-    filter: blur(1rem)
+@keyframes remove-blur-on-reveal  {
+  0% {
+    color: var(--darkPurpleBlue);
+
   }
-  to {
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateY(0) scale(1, 1);
-    opacity: 1;
-    filter: none
+
+  25% {
+    color: var(--darkPurpleBlue);
+
   }
-} */ 
+
+  50% {
+    color: var(--whitey)  
+  }
+
+  51% {
+    filter: blur(.125rem);
+    color: var(--whitey)  
+  } 
+  60% { 
+    filter: blur(.0645rem);
+    color: var(--whitey)  
+  }
+
+  80% { 
+    filter: blur(.03225rem);
+    color: var(--clearOrangeish)  
+  }
+
+  100% { 
+    filter: blur(0);
+    color: var(--clearOrangeish)  
+  }
+}
+
+@keyframes reveal-projects-title {
+  0% {
+    width: 100%;
+    z-index: 1;  
+  }
+  50% {
+    background-color: var(--purpleBlue);
+    z-index: 1;  
+    width: 0%;
+
+  }
+  51% {
+    background-color: var(--whitey);
+    width: 0%;
+    z-index: -1;   
+  }
+  100% {
+    width: 100%;
+    z-index: -1;   
+    background-color: var(--purpleBlue);
+
+  }
+}
+

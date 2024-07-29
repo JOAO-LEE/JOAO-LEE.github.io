@@ -1,0 +1,120 @@
+/* .about-container {
+  position: relative;
+}
+
+.about-title {
+  position: relative;
+  font-size: 4rem;
+  color: var(--purpleBlue);
+  -webkit-text-stroke: 0.3vw var(--clearOrangeish);
+}
+
+.about-title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 0;
+  height: 100%;
+  color: var(--clearOrangeish);
+  border-right: .25rem solid var(--orangeish);
+  overflow: hidden;
+  animation: about-show 2.5s linear 500ms forwards, fade-bar 1s ease-in 2s forwards;
+  /* opacity: .5; */
+/* }
+
+@keyframes about-show {
+  to {
+    width: 33%;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-bar {
+  to {
+    border-right-color: transparent;
+  }
+} */ 
+
+
+/* .projects {
+  perspective: 600px;
+  width: 50%;
+  margin-right: 14px;
+  animation: slideInFromTop 1s ease-out forwards;
+}
+
+.project {
+  font-size: 3vw;
+  font-weight: 400;
+  line-height: 6vw;
+  color: var(--purpleBlue);
+  text-align: right;
+  transform-origin: right;
+  transform: rotateY(-40deg);
+  transition-duration: .4s;
+  padding: 0.25rem;
+  transform-style: preserve-3d;
+}
+
+.project:hover {
+  font-weight: lighter;
+  transform-style: flat;
+  cursor: pointer;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--whitey);
+  transform: rotateY(-28deg) translateZ(0) scale(1.1); 
+  text-shadow: 2px 14px 20px var(--whitey);
+  transition-duration: .4s;
+  /* background-color: var(--purpleBlue); */
+
+/* } */
+/* rotateX(25deg); */
+
+/* @keyframes slideInFromTop {
+  from {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateY(-100%) scale(.5, 1.5);
+    opacity: .5;
+    filter: blur(1rem)
+  }
+  to {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateY(0) scale(1, 1);
+    opacity: 1;
+    filter: none
+  }
+} */ 
+/* 
+.projects-container h2 {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.projects-header {
+  line-height: 50px;
+  font-size: 45px;
+}
+
+.projects-header span {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 100%;
+  color: var(--darkLilac);
+}
+
+.projects-header-animation {
+  animation: shuffle-projects-header steps(10) 2s forwards;
+}
+
+@keyframes shuffle-projects-header {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-500px);
+  }
+}  */
