@@ -20,6 +20,50 @@
   animation: reveal-projects-title 2.750s ease-in-out 250ms forwards;
 }
 
+.github-stats {
+  max-width: fit-content;
+  overflow: hidden;
+  animation: reveal-stats 2s ease-in-out 1s forwards;
+  height: 0;
+  text-align: center;
+  font-weight: 100;
+}
+
+@keyframes reveal-stats {
+  0% {
+    border-bottom: .25rem solid var(--whitey);
+    width: 0px;
+    height: 0px;
+  }
+
+  30% {
+    border-bottom: .25rem solid var(--clearOrangeish);
+    width: 100%;
+    height: 0px;
+  }
+  60% {
+    border-bottom: .25rem solid var(--orangeish);
+    width: 100%;
+    height: 3.5rem;
+  }
+
+  80% {
+    font-weight: 400;
+
+    border-bottom: .25rem solid var(--darkPurpleBlue);
+    width: 100%;
+    height: 3.5rem;
+  }
+
+  100% {
+    font-weight: 400;
+    border-bottom: transparent;
+    width: 100%;
+    height: 3.5rem;
+  }
+}
+
+
 @keyframes remove-blur-on-reveal  {
   0% {
     color: var(--darkPurpleBlue);

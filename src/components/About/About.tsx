@@ -5,7 +5,7 @@ function About() {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.5 });
 
   return (
-    <section className="about-container bg-darkest-purple-blue p-2">
+    <section ref={ref} className="about-container bg-darkest-purple-blue p-2">
       <div className="outer-heading">
         <div className="inner-heading" ref={ref}>
           <h2 className={`heading ${isVisible ? 'animate-heading-up' : ''}`}>
@@ -14,7 +14,7 @@ function About() {
           </h2>
         </div>
       </div>
-      <div 
+      {/* <div 
         className={`flex flex-col gap-20 lg:flex-row text-sm lg:w-2/3 h-full p-10 lg:items-center justify-center about-texts ${isVisible ? 'show' : 'hide'}`} 
         ref={ref}
       >
@@ -30,7 +30,7 @@ function About() {
             I am looking for an opportunity to put into practice the knowledge I acquire everyday and have acquired so far, contributing analytically to the development of new solutions.
           </article>
         </div>   
-      </div>
+      </div> */}
     </section>
   );
 }
