@@ -2,14 +2,15 @@ import { useEffect } from 'react';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import './Projects.css';
 import { GithubLogo } from '@phosphor-icons/react';
+import {getGithubStats} from "../../services/github";
 
 
 function Projects() {
   const [ref, isVisible] = useIntersectionObserver({threshold: 0.5});
-  // useEffect(() => {
-  //   getGithubStats()
-  // }
-  //   ,[]);
+  useEffect(() => {
+    getGithubStats()
+  }
+    ,[]);
 
   return (
     <section 
