@@ -21,14 +21,14 @@ export function Header() {
 
   return (
     <>
-      <div ref={menuRef} className={`menu ${open ? "open" : "close"} lg:hidden h-dvh backdrop-blur-xl text-white w-full`}>
+      <div ref={menuRef} className={`menu ${open ? "open" : "close"} lg:hidden h-dvh backdrop-blur-xl text-white w-full `}>
         <X className={`size-10 ${open ? "x-open" : "x-close"}`} onClick={openCloseMenu} />
         <nav className="menu-navigation uppercase">
           <li className={`nav-item ${open ? "nav-item-fade" : ""}`}>GitHub</li>
           <li className={`nav-item ${open ? "nav-item-fade" : ""}`}>Linkedin</li>
         </nav>
       </div>
-      <header className="flex justify-between items-center p-4 sticky top-0">
+      <header className="flex justify-between items-center p-4 sticky top-0 bg-transparent">
         <List size={32} className="lg:hidden cursor-pointer hamb-menu" onClick={openCloseMenu} />
         <nav  className="navigation-links">
           <li className="nav-item glow-item">Home</li>

@@ -32,13 +32,6 @@
   transition-duration: 1s;
 }
 
-/* .theme-switch:hover {
- 
- text-shadow: 
-  
-} */
-
-
 @keyframes general-fade {
   to {
     opacity: 1;

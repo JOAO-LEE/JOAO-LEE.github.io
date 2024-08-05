@@ -4,7 +4,7 @@
   z-index: 1;
   display: inline-block;
   font-size: 45px;
-  filter: blur(.25rem);
+  font-weight: lighter;
   animation: remove-blur-on-reveal 2.5s ease-in-out 250ms  forwards;
 }
 
@@ -17,7 +17,7 @@
   top: 0;
   left: 0;
   filter: blur(0);
-  animation: reveal-projects-title 5s ease-in-out 250ms forwards;
+  animation: reveal-projects-title 2.750s ease-in-out 250ms forwards;
 }
 
 @keyframes remove-blur-on-reveal  {
@@ -32,25 +32,27 @@
   }
 
   50% {
-    color: var(--whitey)  
+    color: var(--lilac)  
   }
 
   51% {
-    filter: blur(.125rem);
-    color: var(--whitey)  
+
+    color: var(--lilac)  
   } 
   60% { 
-    filter: blur(.0645rem);
-    color: var(--whitey)  
+
+    color: var(--lilac)  
   }
 
   80% { 
-    filter: blur(.03225rem);
-    color: var(--clearOrangeish)  
+  
+    font-weight: 400;
+    color: var(--lilac)  
   }
 
   100% { 
-    filter: blur(0);
+    font-weight: 400;
+
     color: var(--clearOrangeish)  
   }
 }
@@ -59,22 +61,27 @@
   0% {
     width: 100%;
     z-index: 1;  
+    background-image: linear-gradient(45deg, var(--purpleBlue) 50%, var(--orangeish) 10%);
   }
-  50% {
-    background-color: var(--purpleBlue);
+
+  25% {
     z-index: 1;  
-    width: 0%;
 
   }
+  50% {
+    z-index: 1;  
+    width: 0%;
+  }
+
   51% {
-    background-color: var(--whitey);
     width: 0%;
     z-index: -1;   
   }
+
   100% {
     width: 100%;
     z-index: -1;   
-    background-color: var(--purpleBlue);
+    background-image: transparent;
 
   }
 }
