@@ -12,7 +12,8 @@
   content: "";
   width: 100%;
   height: 60px;
-  background-color: var(--purpleBlue);
+  background-image: transparent;
+  /* opacity: 0; */
   position: absolute;
   top: 0;
   left: 0;
@@ -105,28 +106,40 @@
   0% {
     width: 100%;
     z-index: 1; 
-    background-image: linear-gradient(45deg, var(--purpleBlue) 50%, var(--orangeish) 10%);
+    background-color: var(--darkPurpleBlue);
   }
 
   25% {
     z-index: 1;  
+    background-color: var(--purpleBlue);
+
   }
+
   50% {
     z-index: 1;  
     width: 0%;
+    background-color: var(--darkLilac);
 
   }
 
   51% {
     width: 0%;
     z-index: -1; 
+    background-color: var(--lilac);
+
+  }
+
+  61% {
+    width: 0%;
+    z-index: -1; 
+    background-color: var(--orangeish);
 
   }
  
   100% {
     width: 100%;
-    z-index: -1;   
-    background-image: transparent;
+    z-index: -1;
+    background-color: transparent;
 
   }
 }
