@@ -5,7 +5,8 @@
   display: inline-block;
   font-size: 45px;
   font-weight: lighter;
-  animation: remove-blur-on-reveal 2.5s ease-in-out 250ms  forwards;
+  animation: remove-blur-on-reveal 3s ease-in-out 250ms forwards;
+  filter: blur(.25rem);
 }
 
 .projects-title::before {
@@ -13,7 +14,6 @@
   width: 100%;
   height: 60px;
   background-image: transparent;
-  /* opacity: 0; */
   position: absolute;
   top: 0;
   left: 0;
@@ -24,10 +24,27 @@
 .github-stats {
   max-width: fit-content;
   overflow: hidden;
-  animation: reveal-stats 2s ease-in-out 1s forwards;
+  animation: reveal-stats 2.5s ease-in-out 250ms forwards;
   height: 0;
   text-align: center;
   font-weight: 100;
+}
+
+.github-logo {
+  transform: perspective(1000px) translateZ(-200px) translateX(5rem);
+  filter: blur(.3rem);
+  opacity: 0;
+  animation: show-github-logo 3s ease-in-out forwards;
+  color: var(--orangeish);
+}
+
+@keyframes show-github-logo {
+ to {
+  transform: translateX(0) translateZ(-900px);
+  filter: blur(0);
+  color: var(--lilac);
+  opacity: 1;
+ }
 }
 
 @keyframes reveal-stats {
@@ -42,6 +59,7 @@
     width: 100%;
     height: 0px;
   }
+
   60% {
     border-bottom: .25rem solid var(--orangeish);
     width: 100%;
@@ -50,7 +68,6 @@
 
   80% {
     font-weight: 400;
-
     border-bottom: .25rem solid var(--darkPurpleBlue);
     width: 100%;
     height: 3.5rem;
@@ -64,41 +81,37 @@
   }
 }
 
-
 @keyframes remove-blur-on-reveal  {
   0% {
     color: var(--darkPurpleBlue);
-
   }
 
   25% {
     color: var(--darkPurpleBlue);
-
   }
 
   50% {
-    color: var(--lilac)  
+    color: var(--lilac); 
   }
 
   51% {
 
-    color: var(--lilac)  
-  } 
+    color: var(--lilac); 
+  }
+   
   60% { 
-
-    color: var(--lilac)  
+    color: var(--lilac);  
   }
 
   80% { 
-  
     font-weight: 400;
-    color: var(--lilac)  
+    color: var(--lilac);
   }
 
   100% { 
     font-weight: 400;
-
-    color: var(--clearOrangeish)  
+    color: var(--clearOrangeish);
+    filter: blur(0);
   }
 }
 
@@ -106,41 +119,36 @@
   0% {
     width: 100%;
     z-index: 1; 
-    background-color: var(--darkPurpleBlue);
+    background-color: var(--purpleBlue);
   }
 
   25% {
     z-index: 1;  
-    background-color: var(--purpleBlue);
-
+    background-color: var(--darkPurpleBlue);
   }
 
   50% {
     z-index: 1;  
     width: 0%;
     background-color: var(--darkLilac);
-
   }
 
   51% {
     width: 0%;
     z-index: -1; 
     background-color: var(--lilac);
-
   }
 
   61% {
     width: 0%;
     z-index: -1; 
     background-color: var(--orangeish);
-
   }
  
   100% {
     width: 100%;
     z-index: -1;
     background-color: transparent;
-
   }
 }
 
