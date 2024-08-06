@@ -1,21 +1,44 @@
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { projects } from '../../../../projects';
 
 function Slider() {
   return (
-    <div className='flex-1 w-full'>
-    <h4 className='text-center'>see my recent work</h4>
-    <div className='bg-yellow-300 w-full flex p-4 gap-7 justify-center'>
-      {
-        projects.map((project) => (
-          <div key={project.id} className='flex gap-3.5 outline-4'>
-            <img src={project.image} alt="" className='rounded-xl h-24 lg:h-40' />
-            <h5>{project.name}</h5>
-          </div>
-        ))
-      }
-    </div>
+    <div className='bg-lilac w-[60%] grow'>
+      <h4 className=''>see my recent work</h4>
+      <div className='flex  justify-between h-full'>
+        <button>
+          <CaretLeft />
+        </button>
+        <img 
+          src={projects[0].image} 
+          alt="" 
+          // key={projects[0].id 
+          className='object-contain' 
+        />
+        <button>
+          <CaretRight />
+        </button>
+      </div>
   </div>
   )
 }
 
 export default Slider;
+
+{/* <div className='overflow-hidden relative'>
+        <div className='flex '>
+        
+        <div className="flex">
+          {
+            projects.map((project) => (
+             
+            ))
+          }
+        </div>
+        
+        </div>
+        {/* <div className='absolute top-0 flex items-center justify-between h-full w-full'>
+          <button><CaretLeft /></button>
+          
+        // </div> */}
+      // </div> */}
