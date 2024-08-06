@@ -8,6 +8,7 @@ import './Projects.css';
 function Projects() {
   const [ref, isVisible] = useIntersectionObserver({threshold: 0.5});
   const [githubStats, setGithubStats] = useState<GithubStats>();
+
   useEffect(() => {
     const fetchGithubStats = async () => {
       const searchedGithubStats = await getGithubStats();
@@ -32,10 +33,20 @@ function Projects() {
         </div>
         <div className='flex-1'>
           <h4>see my recent work</h4>
+          <div>
+
+          </div>
         </div>
-      <div className={`${isVisible ? "github-logo" : ""} self-end content-end p-2`}>
-        <GithubLogo weight='light' size={"2rem"} />
-      </div>
+      <a 
+      className={`${isVisible ? "github-logo" : ""} self-end content-end p-2 hover:text-orangeish flex gap-2 group transition-colors duration-500 delay-[150ms] items-center`} 
+      href={githubStats?.html_url} 
+      target='_blank'>
+        <p 
+        className='hidden lg:block opacity-0 font-light text-lilac transition-all duration-500 delay-75 text-sm group-hover:opacity-100 group-hover:font-semibold'>
+          check my profile!
+        </p>
+        <GithubLogo weight='light' size={"2rem"} className='group-hover:text-orangeish transition-colors duration-500 delay-[150ms]'/>
+      </a>
       </div>
     </section>
   )

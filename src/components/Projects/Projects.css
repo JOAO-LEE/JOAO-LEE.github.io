@@ -91,21 +91,16 @@
   }
 
   50% {
-    color: var(--lilac); 
+    color: var(--darkLilac); 
   }
 
-  51% {
-
-    color: var(--lilac); 
-  }
-   
   60% { 
     color: var(--lilac);  
   }
 
   80% { 
     font-weight: 400;
-    color: var(--lilac);
+    color: var(--darkLilac);
   }
 
   100% { 
