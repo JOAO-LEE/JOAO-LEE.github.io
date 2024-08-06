@@ -47,7 +47,6 @@ section {
 .show {
   visibility: visible;
   opacity: 1;
-  /* filter: blur(0); */
   transform: translateY(0);
   transition: all 1s linear;
   transition-delay: 100ms;

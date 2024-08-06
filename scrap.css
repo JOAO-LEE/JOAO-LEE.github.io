@@ -118,3 +118,24 @@
     transform: translateY(-500px);
   }
 }  */
+
+/* 
+.check-projects {
+
+  color: #986dff;
+      position: relative;
+      font-size: 2rem;
+      font-weight: 400;
+}
+
+.check-projects::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -7px;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+} */

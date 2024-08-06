@@ -14,7 +14,7 @@ function About() {
           </h2>
         </div>
       </div>
-      <div 
+      {/* <div 
         className={`flex flex-col gap-20 lg:flex-row text-sm lg:w-2/3 h-full p-10 lg:items-center justify-center about-texts ${isVisible ? 'show' : 'hide'}`} 
       >
         <div className="lg:mb-40 w-96">
@@ -28,8 +28,8 @@ function About() {
           <article className={`${isVisible && "about-article"} text-lg text-justify`}> 
             I am looking for an opportunity to put into practice the knowledge I acquire everyday and have acquired so far, contributing analytically to the development of new solutions.
           </article>
-        </div>   
-      </div>
+        </div>    */}
+      {/* </div> */}
     </section>
   );
 }
