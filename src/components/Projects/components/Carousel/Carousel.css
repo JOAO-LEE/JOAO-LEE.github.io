@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .carousel-buttons {
+    @apply rounded-full bg-white/80 shadow p-1 transition-colors duration-[400ms] delay-100
+  }
+  .carousel-arrows {
+    @apply text-purple-blue hover:animate-pulse group-hover:text-orangeish transition-colors duration-200 delay-100
+  }
+}
