@@ -6,6 +6,18 @@
   --purpleBlue: #27187e;
   --darkPurpleBlue: #21146f;
 
+  /* color palette */
+  --palOrange100: #ff9e00;
+  --palOrange200: #ff9100;
+  --palOrange300: #FF8500;
+  --palOrange400: #FF7900;
+  --palOrange500: #FF6D00;
+  --palPurple100: #9D4EDD;
+  --palPurple200: #7B2CBF;
+  --palPurple300: #5A189A;
+  --palPurple400: #3C096C;
+  --palPurple500: #240046;
+
   --darkLilac: #758bfd;
   --lilac: #aeb8fe;
   --whitey: #f1f2f6;
@@ -14,10 +26,12 @@
   --generalDelay: 500ms;
 }
 
+/* color palette */
+
 body {
   font-family: "Unbounded", sans-serif;
   color: var(--whitey);
-  background-color: var(--purpleBlue);
+  background-color: var(--palPurple500);
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -28,6 +42,8 @@ body {
 
  body::-webkit-scrollbar {
   display: none;
+
+
 }
 
 section {
@@ -38,16 +54,18 @@ section {
 
 .hide {
   opacity: 0;
-  filter: blur(2rem);
-  transform: translateY(-10rem);
+  filter: blur(.5rem);
   transition: all 1s linear;
   visibility: hidden;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+
 }
 
 .show {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0);
-  transition: all 1s linear;
-  transition-delay: 100ms;
+  transition: all 1.5s linear;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
 }

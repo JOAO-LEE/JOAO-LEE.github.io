@@ -19,32 +19,4 @@ export const projects: Array<Project> = [
     deployed: true,
     applicationUrl: "https://google-clone-eta-henna.vercel.app/"
   },
-
-  {
-    id: 2,
-    name: "dummy 1",
-    githubRepository: "https://github.com/JOAO-LEE/google_clone",
-    description: "",
-    image: "src/assets/google-clone.png",
-    deployed: true,
-    applicationUrl: "https://google-clone-eta-henna.vercel.app/"
-  },
-  {
-    id: 3,
-    name: "dummy 2",
-    githubRepository: "https://github.com/JOAO-LEE/google_clone",
-    description: "",
-    image: "src/assets/google-clone.png",
-    deployed: true,
-    applicationUrl: "https://google-clone-eta-henna.vercel.app/"
-  },
-  {
-    id: 4,
-    name: "dummy 3",
-    githubRepository: "https://github.com/JOAO-LEE/google_clone",
-    description: "",
-    image: "src/assets/google-clone.png",
-    deployed: true,
-    applicationUrl: "https://google-clone-eta-henna.vercel.app/"
-  },
 ];
