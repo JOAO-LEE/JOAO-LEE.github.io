@@ -1,5 +1,5 @@
 .intro {
-  color: var(--bgGradientBlack);
+  color: var(--palPurple500);
   overflow: hidden;
 }
 
@@ -43,7 +43,7 @@
   content: "";
   width: 0;
   height: 0.25rem;
-  background-image: linear-gradient(235deg, var(--orangeish) 10%, var(--purpleBlue) 80%);
+  background-image: linear-gradient(235deg, var(--palOrange500) 10%, var(--palPurple400) 80%);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -72,7 +72,7 @@
   to {
     letter-spacing: 0;
     font-weight: 200;
-    color: var(--orangeish);
+    color: var(--palOrange300);
     filter: blur(0);
   }
 }

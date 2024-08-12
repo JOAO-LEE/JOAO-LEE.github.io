@@ -2,11 +2,17 @@
   --bgGradientBlack: #00061d;
   --bgGradientPurple: #1d40d8;
   --typewriterSpeed: 4s;
+  --generalDelay: 500ms;
   --introAnimationDelay: 8s;
   --purpleBlue: #27187e;
   --darkPurpleBlue: #21146f;
+  --darkLilac: #758bfd;
+  --lilac: #aeb8fe;
+  --whitey: #f1f2f6;
+  --orangeish: #ff8600;
+  --clearOrangeish: #fb8500;
 
-  /* color palette */
+  /* lakers color palette */
   --palOrange100: #ff9e00;
   --palOrange200: #ff9100;
   --palOrange300: #FF8500;
@@ -15,23 +21,27 @@
   --palPurple100: #9D4EDD;
   --palPurple200: #7B2CBF;
   --palPurple300: #5A189A;
-  --palPurple400: #3C096C;
-  --palPurple500: #240046;
+  --palPurple400: #47126b;
+  --palPurple500: #3C096C;
+  --palPurple600: #240046;
 
-  --darkLilac: #758bfd;
-  --lilac: #aeb8fe;
-  --whitey: #f1f2f6;
-  --orangeish: #ff8600;
-  --clearOrangeish: #fb8500;
-  --generalDelay: 500ms;
+  /* fbi color palette */
+  --palBlue100: #003566;
+  --palBlue200: #001D3D;
+  --palBLue300: #14213d;
+  --palBlue400: #000814;
+  --palYellow100: #FFC300;
+  --palYellow200: #FFD60A;
+  --palYellow300: #fca311;
+  --grayish: #e5e5e5;
+
+
 }
-
-/* color palette */
 
 body {
   font-family: "Unbounded", sans-serif;
   color: var(--whitey);
-  background-color: var(--palPurple500);
+  background-color: var(--palBlue400);
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -40,10 +50,8 @@ body {
   scroll-behavior: smooth;
 }
 
- body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-
-
 }
 
 section {
@@ -59,7 +67,6 @@ section {
   visibility: hidden;
   transform-style: preserve-3d;
   transform-origin: bottom;
-
 }
 
 .show {

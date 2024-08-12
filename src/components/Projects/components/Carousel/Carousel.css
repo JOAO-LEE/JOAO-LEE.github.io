@@ -12,7 +12,7 @@
   }
 
   .carousel-spy {
-    @apply transition-all duration-500 border size-2 shadow-lg rounded-full
+    @apply transition-all duration-500 border size-2.5 shadow-lg rounded-full
   }
 
 }

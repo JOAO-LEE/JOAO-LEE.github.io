@@ -21,23 +21,45 @@ export function Header() {
 
   return (
     <>
-      <div ref={menuRef} className={`menu ${open ? "open" : "close"} lg:hidden h-1/2 backdrop-blur-md text-white w-full `}>
-        <X className={`size-10 ${open ? "x-open" : "x-close"}`} onClick={openCloseMenu} />
-        <nav className="menu-navigation uppercase">
-          <li className={`nav-item ${open ? "nav-item-fade" : ""}`}>GitHub</li>
-          <li className={`nav-item ${open ? "nav-item-fade" : ""}`}>Linkedin</li>
+      <div 
+      ref={menuRef} 
+      className={`menu ${open ? "open" : "close"} lg:hidden h-1/2 backdrop-blur-md text-white w-full`}
+      >
+        <X 
+        className={`size-10 ${open ? "x-open" : "x-close"}`} 
+        onClick={openCloseMenu} 
+        />
+        <nav 
+        className="menu-navigation uppercase">
+          <li 
+          className={`nav-item ${open ? "nav-item-fade" : ""}`}
+          >
+            GitHub
+          </li>
+          <li 
+          className={`nav-item ${open ? "nav-item-fade" : ""}`}
+          >
+            Linkedin
+          </li>
         </nav>
       </div>
-      <header className="flex justify-between items-center p-4 sticky top-0 bg-transparent">
-        <List size={32} className="lg:hidden cursor-pointer hamb-menu" onClick={openCloseMenu} />
-        <nav  className="navigation-links">
-          <li className="nav-item glow-item">Home</li>
+      <header 
+      className="flex justify-between items-center p-4 sticky top-0 bg-transparent"
+      >
+        <List 
+        size={32} 
+        className="lg:hidden cursor-pointer hamb-menu" 
+        onClick={openCloseMenu} 
+        />
+        <nav className="navigation-links">
+          <li className="nav-item glow-item" >Home</li>
           <li className="nav-item glow-item">GitHub</li>
           <li className="nav-item glow-item">Linkedin</li>
         </nav>
         <Sun 
         className={`cursor-pointer hover:scale-110 duration-500 test-animation ${open && "static"} theme-switch`} 
-        size={32} />
+        size={32} 
+        />
       </header>
     </>
   );

@@ -1,9 +1,9 @@
-import { CaretLeft, CaretRight, Circle, CircleDashed } from '@phosphor-icons/react';
-import './Carousel.css';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { ReactNode, useState } from 'react';
 import useIntersectionObserver from '../../../../hooks/useIntersectionObserver';
+import './Carousel.css';
 
-function Carousel({children}: {children: ReactNode[]}) {
+function Carousel({ children }: {children: ReactNode[] }) {
   const [curr, setCurr] = useState<number>(0);
   const [ref, isVisible] = useIntersectionObserver({threshold: 0.5});
 
@@ -25,7 +25,8 @@ function Carousel({children}: {children: ReactNode[]}) {
           {children}
         </div>
         <div 
-        className='absolute inset-0 flex items-center justify-between p-4'>
+        className='absolute inset-0 flex items-center justify-between p-2.5'
+        >
           <button 
           onClick={previousSlide}
           className='carousel-buttons group'>
@@ -51,8 +52,9 @@ function Carousel({children}: {children: ReactNode[]}) {
             {
               children.map((_, i) => (
                 <div 
-                key={i} 
-                className={`carousel-spy ${curr === i ? "p-2 border-orangeish" : "bg-opacity-50 border-dark-lilac"}`} 
+                key={i}
+                onClick={()=> setCurr(curr === i ? curr : i)} 
+                className={`carousel-spy cursor-pointer ${curr === i ? "p-2 border-orangeish" : "bg-opacity-50 border-dark-lilac"}`} 
                 />
               ))
             }

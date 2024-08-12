@@ -12,6 +12,7 @@ export default {
         whitey: "#F1F2F6",
         orangeish: "#FF8600",
         "clear-orangeish": "#FB8500",
+        grayish: "#e5e5e5",
 
         "pal-orange": {
           100: "#FF9E00",
@@ -24,11 +25,31 @@ export default {
           100: "#9D4EDD",
           200: "#7B2CBF",
           300: "#5A189A",
-          400: "#3C096C",
-          500: "#240046",
+          400: "#47126b",
+          500: "#3C096C",
+          600: "#240046",
+        },
+        "pal-blue": {
+          100: "#003566",
+          200: "#001D3D",
+          300: "#14213d",
+          400: "#000814",
+        },
+        "pal-yellow": {
+          100: "#FFC300",
+          200: "#FFD60A",
+          300: "#fca311",
         },
       },
     },
   },
   plugins: [],
 };
+
+// --palBlue100: #003566;
+//   --palBlue200: #001D3D;
+//   --palBLue300: #14213d;
+//   --palBlue400: #000814;
+//   --palYellow100: #FFC300;
+//   --palYellow200: #FFD60A;
+//   --palYellow300: #fca311;
