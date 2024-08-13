@@ -5,9 +5,15 @@ function About() {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.5 });
 
   return (
-    <section ref={ref} className="about-container bg-darkest-purple-blue p-2">
+    <section 
+    ref={ref} 
+    className="about-container bg-pal-purple-600 p-2"
+    >
       <div className="outer-heading">
-        <div className="inner-heading" ref={ref}>
+        <div 
+        className="inner-heading" 
+        ref={ref}
+        >
           <h2 className={`heading ${isVisible ? 'animate-heading-up' : ''}`}>
             &nbsp; <br />
             about

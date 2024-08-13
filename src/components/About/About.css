@@ -5,7 +5,6 @@
   flex-direction: column;
   background-color: #ddd;
   align-items: center;
-  background-color: red;
 }
 
 .outer-heading {
@@ -30,7 +29,7 @@
 .inner-heading h2 {
   position: relative;
   left: 10px;
-  color: var(--lilac);
+  color: var(--palPurple100);
 }
 
 @keyframes show-texts {
@@ -41,7 +40,7 @@
 }
 
 .animate-heading-up {
-  animation: heading-up 1.5s ease-in-out forwards;
+  animation: heading-up 1.750s ease-in-out forwards;
 }
 
 .about-article {
@@ -58,20 +57,19 @@
 
 @keyframes about-article {
   to {
-  color: var(--whitey);
-  font-weight: 200;
-  letter-spacing: 0;
+    color: var(--whitey);
+    font-weight: 100;
+    letter-spacing: 0;
   }
 }
 
 @keyframes heading-up {
   0% {
     top: 0px;
-    left: 10px;
-    opacity: .25;
+    left: 15px;
   }
   100% {
-    color: var(--clearOrangeish);
+    color: var(--palOrange100);
     top: -50px;
     font-weight: 400;
     left: 0;
