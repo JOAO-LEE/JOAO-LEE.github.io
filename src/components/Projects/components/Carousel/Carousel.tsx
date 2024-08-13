@@ -3,13 +3,9 @@ import { ReactNode, useState } from 'react';
 import useIntersectionObserver from '../../../../hooks/useIntersectionObserver';
 import './Carousel.css';
 
-function Carousel({ children }: {children: ReactNode[] }) {
-  const [curr, setCurr] = useState<number>(0);
-  const [ref, isVisible] = useIntersectionObserver({threshold: 0.5});
-
-  const previousSlide = () => setCurr(curr => curr == 0 ? children.length -1 : curr - 1);
-  const nextSlide = () => setCurr(curr =>  curr === children.length - 1 ? 0 : curr + 1);
-
+function Carousel({ children }: { children: ReactNode[] }) {
+  const [ref] = useIntersectionObserver({threshold: 0.5});
+  
   return (
     <div 
     ref={ref} 

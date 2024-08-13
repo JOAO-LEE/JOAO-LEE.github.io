@@ -11,6 +11,7 @@ import './Projects.css';
 function Projects() {
   const [ref, isVisible] = useIntersectionObserver({threshold: 0.5});
   const [githubStats, setGithubStats] = useState<GithubStatsModel>();
+ 
 
   useEffect(() => {
     const fetchGithubStats = async () => {
