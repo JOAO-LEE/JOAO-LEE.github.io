@@ -3,7 +3,7 @@ import './Intro.css';
 function Intro() {
   return (
     <section 
-    className="flex flex-col xl:flex-row items-center justify-center gap-1 p-2 lg:p-6 lg:gap-10 intro bg-pal-blue-400">
+    className="flex flex-col xl:flex-row items-center justify-center gap-1 p-2 lg:p-6 lg:gap-10 intro bg-pal-purple-600">
       <div className="text-intro flex flex-col gap-2 p-2 greeting-container">
         <h1 className="text-3xl lg:text-5xl">João Lima</h1>
         <h1
