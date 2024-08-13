@@ -24,23 +24,14 @@
   --palPurple400: #47126b;
   --palPurple500: #3C096C;
   --palPurple600: #240046;
-
-  /* fbi color palette */
-  --palBlue100: #00509d;
-  --palBlue200: #003566;
-  --palBlue300: #001D3D;
-  --palBLue400: #14213d;
-  --palBlue500: #000814;
-  --palYellow50: #ffc43d;
-  --palYellow100: #FFC300;
-  --palYellow200: #FFD60A;
-  --palYellow300: #fca311;
+  --palPurple700: #311847;
+  --palPurple800: #571089;
   --grayish: #e5e5e5;
 }
 
 body {
   font-family: "Unbounded", sans-serif;
-  background-color: var(--palBlue500);
+  background-color: var(--palPurple);
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;

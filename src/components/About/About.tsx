@@ -7,7 +7,7 @@ function About() {
   return (
     <section 
     ref={ref} 
-    className="about-container bg-pal-purple-600 p-2"
+    className="about-container bg-pal-purple-700 p-2"
     >
       <div className="outer-heading">
         <div 

@@ -52,7 +52,7 @@ export function Header() {
         onClick={openCloseMenu} 
         />
         <nav className="navigation-links">
-          <li className="nav-item glow-item" >Home</li>
+          <li className="nav-item glow-item">Home</li>
           <li className="nav-item glow-item">GitHub</li>
           <li className="nav-item glow-item">Linkedin</li>
         </nav>

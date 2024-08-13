@@ -23,8 +23,8 @@ function Projects() {
   return (
     <section 
     ref={ref} 
-    className='bg-purple-blue'>
-      <div className='flex flex-col  h-full'>
+    className='bg-pal-purple-600'>
+      <div className='flex flex-col h-full'>
         <div className='mx-auto'>
           <h2 className={`${isVisible ? 'projects-title' : "text-transparent"}`}>projects</h2>
         </div>
@@ -48,17 +48,17 @@ function Projects() {
         githubStats={githubStats!}
         />
         <a 
-        className={`${isVisible ? "github-logo" : ""} self-end content-end p-2 hover:text-orangeish flex gap-2 group transition-colors duration-500 delay-[150ms] items-center`} 
+        className={`${isVisible ? "github-logo" : ""} self-end content-end p-2  flex gap-2 group transition-colors duration-500 delay-[150ms] items-center`} 
         href={githubStats?.html_url} 
         target='_blank'>
           <p 
-          className='hidden lg:block opacity-0 font-light text-lilac transition-all duration-500 delay-75 text-sm group-hover:opacity-100 group-hover:font-semibold hover:text-whitey hover:bg-dark-lilac p-2 rounded-xl'>
+          className='hidden lg:block opacity-0 font-light text-grayish transition-all duration-500 delay-75 text-sm group-hover:opacity-100 group-hover:font-semibold hover:text-pal-orange-200 hover:bg-pal-purple-500 p-2 rounded-xl'>
             check my profile!
           </p>
           <GithubLogo 
           weight='light' 
           size={"2rem"} 
-          className='group-hover:text-orangeish transition-colors duration-500 delay-[150ms]'
+          className='group-hover:text-pal-orange-100 transition-colors duration-500 delay-[150ms]'
           />
         </a>
       </div>
