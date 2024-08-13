@@ -54,7 +54,7 @@ function Carousel({ children }: {children: ReactNode[] }) {
                 <div 
                 key={i}
                 onClick={()=> setCurr(curr === i ? curr : i)} 
-                className={`carousel-spy cursor-pointer ${curr === i ? "p-2 border-orangeish" : "bg-opacity-50 border-dark-lilac"}`} 
+                className={`carousel-spy cursor-pointer ${curr === i ? "p-2 border-pal-orange-100" : "bg-opacity-50 border-pal-purple-300 hover:bg-pal-purple-300"}`} 
                 />
               ))
             }

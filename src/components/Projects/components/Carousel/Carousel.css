@@ -4,15 +4,15 @@
 
 @layer components {
   .carousel-buttons {
-    @apply rounded-full bg-white/80 shadow p-1 transition-colors duration-[400ms] delay-100
+    @apply rounded-full bg-grayish/60 shadow p-1 transition-all duration-[400ms] delay-100 hover:bg-opacity-50 hover:bg-pal-purple-400/80 hover:p-0.5
   }
 
   .carousel-arrows {
-    @apply text-purple-blue hover:animate-pulse group-hover:text-orangeish transition-colors duration-200 delay-100 text-[1rem] md:text-[1.25rem] lg:text-[2rem]
+    @apply text-purple-800 group-hover:text-pal-orange-100 transition-all duration-200 delay-100 text-[1rem] md:text-[1.25rem] lg:text-[2rem] 
   }
 
   .carousel-spy {
-    @apply transition-all duration-500 border size-2.5 shadow-lg rounded-full
+    @apply transition-all duration-700 border size-2.5 shadow-lg rounded-full
   }
 
 }
