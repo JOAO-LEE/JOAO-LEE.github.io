@@ -36,13 +36,10 @@
   --palYellow200: #FFD60A;
   --palYellow300: #fca311;
   --grayish: #e5e5e5;
-
-
 }
 
 body {
   font-family: "Unbounded", sans-serif;
-  /* color: var(--); */
   background-color: var(--palBlue500);
   margin: 0px;
   padding: 0px;
@@ -50,6 +47,8 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  color: var(--grayish);
+
 }
 
 body::-webkit-scrollbar {

@@ -1,6 +1,6 @@
 .intro {
-  color: var(--palPurple500);
   overflow: hidden;
+  color: var(--palPurple100);
 }
 
 .text-intro {
@@ -8,7 +8,7 @@
 }
 
 .mini-about {
-  color: var(--orangeish);
+  color: var(--palOrange100);
   font-size: 1rem;
   animation: mini-about-color-change 2s ease-in-out 500ms forwards;
   font-weight: 600;
@@ -16,7 +16,7 @@
 
 @keyframes mini-about-color-change {
   to {
-    color: var(--lilac);
+    color: var(--grayish);
     font-weight: 100;
   }
 }
@@ -43,7 +43,7 @@
   content: "";
   width: 0;
   height: 0.25rem;
-  background-image: linear-gradient(235deg, var(--palOrange500) 10%, var(--palPurple400) 80%);
+  background-image: linear-gradient(235deg, var(--palOrange100) 10%, var(--palPurple500) 80%);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -72,12 +72,12 @@
   to {
     letter-spacing: 0;
     font-weight: 200;
-    color: var(--palOrange300);
+    color: var(--palOrange100);
     filter: blur(0);
   }
 }
 
-.greeting-image {
+/* .greeting-image {
   position: relative;
   padding: 2.5rem;
 }
@@ -114,11 +114,11 @@
     border-radius: 10%;
     border-color: var(--whitey)
   }
-}
+} */
 
 @keyframes greeting-three-dee {
   to {
-    color: white;
+    color: var(--grayish);
     transform: none;
     opacity: 1;
     filter: blur(0);
@@ -126,7 +126,7 @@
 }
 
 @media (min-width: 1024px) {
-  .greeting-image figure {
+  /* .greeting-image figure {
     width: 20rem;
     height: 20rem;
   }
@@ -134,7 +134,7 @@
   .greeting-image .photograph {
     width: 20rem;
     height: 20rem;
-  }
+  } */
   .greeting-container h1:nth-child(2) {
     font-size: 4rem;
   }
