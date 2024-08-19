@@ -1,10 +1,10 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect } from 'react';
 import useIntersectionObserver from '../../../../hooks/useIntersectionObserver';
 import './Carousel.css';
 
-function Carousel({ children }: { children: ReactNode[] }) {
-  const [ref] = useIntersectionObserver({threshold: 0.5});
+function Carousel({ children, curr, previousSlide, nextSlide }: { children: ReactNode[], curr: number, previousSlide: () => void, nextSlide: () => void }) {
+  const [ref] = useIntersectionObserver({ threshold: 0.5 });
   
   return (
     <div 
@@ -49,7 +49,7 @@ function Carousel({ children }: { children: ReactNode[] }) {
               children.map((_, i) => (
                 <div 
                 key={i}
-                onClick={()=> setCurr(curr === i ? curr : i)} 
+                // onClick={()=> setCurr(curr === i ? curr : i)} 
                 className={`carousel-spy cursor-pointer ${curr === i ? "p-2 border-pal-orange-100" : "bg-opacity-50 border-pal-purple-300 hover:bg-pal-purple-300"}`} 
                 />
               ))

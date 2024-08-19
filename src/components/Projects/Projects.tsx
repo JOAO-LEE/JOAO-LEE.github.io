@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import { GithubLogo } from '@phosphor-icons/react';
 import { getGithubStats } from '../../services/github';
@@ -7,12 +7,13 @@ import GithubStats from './components/GithubStats/GithubStats';
 import Carousel from './components/Carousel/Carousel';
 import { projects } from '../../projects';
 import './Projects.css';
+import { ProjectContext } from '../../context/Project/ProjectContext';
 
 function Projects() {
   const [ref, isVisible] = useIntersectionObserver({threshold: 0.5});
   const [githubStats, setGithubStats] = useState<GithubStatsModel>();
+  const { curr, nextSlide, previousSlide } = useContext(ProjectContext)
  
-
   useEffect(() => {
     const fetchGithubStats = async () => {
       const searchedGithubStats = await getGithubStats();
@@ -30,7 +31,7 @@ function Projects() {
           <h2 className={`${isVisible ? 'projects-title' : "text-transparent"}`}>projects</h2>
         </div>
         <div className='p-4'>
-          <Carousel>
+          <Carousel curr={curr!} previousSlide={previousSlide!} nextSlide={nextSlide!}>
             {
               projects
               .map((p) => (

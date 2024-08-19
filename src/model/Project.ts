@@ -9,7 +9,7 @@
 }
 
 export type ProjectContext = {
-  curr: number
-  previousSlide: () => void
-  nextSlide: () => void
+  curr?: number
+  previousSlide?: () => void
+  nextSlide?: () => void
 }
