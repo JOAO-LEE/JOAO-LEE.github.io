@@ -5,10 +5,11 @@ export const projects: Array<Project> = [
     id: 0,
     name: "X Clone",
     githubRepository: "https://github.com/JOAO-LEE/x_clone",
-    description: "",
+    description: "X's replica (former Twitter) interface. Users can create, like, reply and delete posts of their own. It's also possible to add images to a post.",
     image: "src/assets/x-clone.png",
     deployed: true,
-    applicationUrl: "https://x-clone-tan-seven.vercel.app/"
+    applicationUrl: "https://x-clone-tan-seven.vercel.app/",
+    techStack: ["Next.js", "React.js", "TypeScript", "TailwindCSS"]
   },
   {
     id: 1,
@@ -17,6 +18,7 @@ export const projects: Array<Project> = [
     description: "",
     image: "src/assets/google-clone.png",
     deployed: true,
-    applicationUrl: "https://google-clone-eta-henna.vercel.app/"
+    applicationUrl: "https://google-clone-eta-henna.vercel.app/",
+    techStack: ["Next.js", "React.js", "TypeScript", "TailwindCSS"]
   },
 ];

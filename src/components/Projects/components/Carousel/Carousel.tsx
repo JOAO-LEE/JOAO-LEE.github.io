@@ -1,18 +1,19 @@
-import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { ReactNode, useEffect } from 'react';
-import useIntersectionObserver from '../../../../hooks/useIntersectionObserver';
-import './Carousel.css';
+import { CaretLeft, CaretRight } from "@phosphor-icons/react";
+import { ReactNode, useContext, useEffect } from "react";
+import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
+import "./Carousel.css";
+import { ProjectContext } from "../../../../context/Project/ProjectContext";
 
-function Carousel({ children, curr, previousSlide, nextSlide }: { children: ReactNode[], curr: number, previousSlide: () => void, nextSlide: () => void }) {
+function Carousel({ children }: { children: ReactNode[] }) {
   const [ref] = useIntersectionObserver({ threshold: 0.5 });
-  
+  const { curr = 0, setCurr, previousSlide, nextSlide } = useContext(ProjectContext)
   return (
     <div 
     ref={ref} 
-    className="max-w-[34rem]"
+    className="md:min-w-[32rem]"
     >
       <div 
-      className={`overflow-hidden relative size-56 md:size-80 2xl:w-[34rem] `}
+      className={`overflow-hidden relative size-56 md:size-[32rem]`}
       >
         <div 
         className='flex transition-transform ease-in-out duration-500' 
@@ -49,7 +50,7 @@ function Carousel({ children, curr, previousSlide, nextSlide }: { children: Reac
               children.map((_, i) => (
                 <div 
                 key={i}
-                // onClick={()=> setCurr(curr === i ? curr : i)} 
+                onClick={()=> setCurr(curr === i ? curr : i)} 
                 className={`carousel-spy cursor-pointer ${curr === i ? "p-2 border-pal-orange-100" : "bg-opacity-50 border-pal-purple-300 hover:bg-pal-purple-300"}`} 
                 />
               ))

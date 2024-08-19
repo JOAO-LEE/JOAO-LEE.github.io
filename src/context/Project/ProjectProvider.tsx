@@ -8,10 +8,9 @@ export function ProjectProvider({ children, slides }: { children: ReactNode, sli
   const previousSlide = () => setCurr(curr => curr == 0 ? slides.length - 1 : curr - 1);
   const nextSlide = () => setCurr(curr =>  curr === slides.length - 1 ? 0 : curr + 1);
 
-
   return (
     <ProjectContext.Provider 
-    value={{curr, previousSlide, nextSlide}}
+    value={{curr, setCurr, previousSlide, nextSlide}}
     >
       { children }
     </ProjectContext.Provider>
