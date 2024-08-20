@@ -1,11 +1,11 @@
-import { Header } from './components/Header/Header';
-import Main from './components/Main/Main';
-import Intro from './components/Intro/Intro';
-import './App.css';
-import Projects from './components/Projects/Projects';
-import About from './components/About/About';
-import { ProjectProvider } from './context/Project/ProjectProvider';
-import { projects } from './projects';
+import Main from "./components/Main/Main";
+import Intro from "./components/Intro/Intro";
+import Projects from "./components/Projects/Projects";
+import About from "./components/About/About";
+import { Header } from "./components/Header/Header";
+import { ProjectProvider } from "./context/Project/ProjectProvider";
+import { projects } from "./projects";
+import "./App.css";
 
 function App() {
   return (
