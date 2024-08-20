@@ -11,12 +11,12 @@ function Carousel({ children }: { children: ReactNode[] }) {
   return (
     <div 
     ref={ref} 
-    className="mx-auto sm:mx-0"
+    className=""
     >
       <div 
-      className={`overflow-hidden relative size-64 md:size-[32rem]`}
+      className={`overflow-hidden relative size-36 md:size-[32rem]`}
       >
-        <div 
+        <div
         className="flex transition-transform ease-in-out duration-500" 
         style={{transform: `translateX(-${curr * 100}%)`}}
         >

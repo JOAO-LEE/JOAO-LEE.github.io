@@ -3,15 +3,16 @@ import { projects } from "../../../../projects"
 import { ProjectContext } from "../../../../context/Project/ProjectContext"
 import AnimatedButton from "../AnimatedButton/AnimatedButton";
 import { AppWindow, CodeBlock } from "@phosphor-icons/react";
+import TechStackList from "../TechStackList/TechStackList";
 
 function ProjectAbout() {
   const { curr = 0 } = useContext(ProjectContext);
   return (
     <div 
-    className="p-4 space-y-4 text-sm"
+    className="px-4 space-y-1 text-xs md:text-sm"
     >
       <h3 
-      className="text-2xl lg:text-5xl"
+      className="text-lg lg:text-5xl"
       >
         {projects[curr].name}
       </h3>
@@ -22,38 +23,9 @@ function ProjectAbout() {
           {projects[curr].description}
         </p> 
       </article>
-      <ul 
-      className="flex gap-1 lowercase text-xs flex-wrap justify-center"
-      >
-        {
-          projects[curr].techStack
-            .map((tech, i) => (
-              <li 
-              key={i}
-              className="bg-pal-orange-100 p-2 rounded-xl text-pal-purple-800 hover:text-grayish transition duration-500"
-              >
-                #{tech}
-              </li>
-          ))
-        }
-      </ul>
-      <div 
-      className="flex gap-2 justify-center"
-      >
-        <AnimatedButton
-        link={projects[curr].applicationUrl} 
-        title="app" 
-        icon={
-          <AppWindow />
-        } 
-        />
-        <AnimatedButton
-        link={projects[curr].githubRepository} 
-        title="repository"
-        icon={
-          <CodeBlock />
-        } 
-        />
+      <div className="hidden xl:block">
+
+        <TechStackList />
       </div>
     </div>
   )
