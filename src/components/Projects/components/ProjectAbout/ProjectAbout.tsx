@@ -3,6 +3,7 @@ import { projects } from "../../../../projects"
 import { ProjectContext } from "../../../../context/Project/ProjectContext"
 import AnimatedButton from "../AnimatedButton/AnimatedButton";
 import { AppWindow, CodeBlock } from "@phosphor-icons/react";
+
 function ProjectAbout() {
   const { curr = 0 } = useContext(ProjectContext);
   return (
@@ -10,26 +11,26 @@ function ProjectAbout() {
     className="p-4 space-y-4 text-sm"
     >
       <h3 
-      className='text-2xl lg:text-5xl'
+      className="text-2xl lg:text-5xl"
       >
         {projects[curr].name}
       </h3>
-      <article className=''>
+      <article className="">
         <p 
-        className='text-xs md:text-lg'
+        className="text-xs md:text-lg"
         >
           {projects[curr].description}
         </p> 
       </article>
       <ul 
-      className='flex gap-1 lowercase text-xs flex-wrap justify-center'
+      className="flex gap-1 lowercase text-xs flex-wrap justify-center"
       >
         {
           projects[curr].techStack
             .map((tech, i) => (
               <li 
               key={i}
-              className='bg-pal-orange-100 p-2 rounded-xl text-pal-purple-800 hover:text-grayish transition duration-500'
+              className="bg-pal-orange-100 p-2 rounded-xl text-pal-purple-800 hover:text-grayish transition duration-500"
               >
                 #{tech}
               </li>
@@ -37,18 +38,18 @@ function ProjectAbout() {
         }
       </ul>
       <div 
-      className='flex gap-2 justify-center'
+      className="flex gap-2 justify-center"
       >
         <AnimatedButton
         link={projects[curr].applicationUrl} 
-        title='app' 
+        title="app" 
         icon={
           <AppWindow />
         } 
         />
         <AnimatedButton
         link={projects[curr].githubRepository} 
-        title='repository'
+        title="repository"
         icon={
           <CodeBlock />
         } 
