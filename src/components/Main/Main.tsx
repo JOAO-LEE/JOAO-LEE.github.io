@@ -1,5 +1,5 @@
-import { ReactNode } from 'react';
-import './Main.css';
+import { ReactNode } from "react";
+import "./Main.css";
 
 function Main({ children }: { children: ReactNode }) {
   return (
