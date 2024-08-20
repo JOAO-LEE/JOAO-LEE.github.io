@@ -9,7 +9,7 @@ export const projects: Array<Project> = [
     image: "src/assets/x-clone.png",
     deployed: true,
     applicationUrl: "https://x-clone-tan-seven.vercel.app/",
-    techStack: ["Next.js", "React.js", "TypeScript", "TailwindCSS"]
+    techStack: ["Next.js", "React.js", "TypeScript", "TailwindCSS", "Firebase"]
   },
   {
     id: 1,
@@ -19,6 +19,6 @@ export const projects: Array<Project> = [
     image: "src/assets/google-clone.png",
     deployed: true,
     applicationUrl: "https://google-clone-eta-henna.vercel.app/",
-    techStack: ["Next.js", "React.js", "TypeScript", "TailwindCSS"]
+    techStack: ["Next.js", "React.js", "TypeScript", "TailwindCSS", "Firebase"]
   },
 ];

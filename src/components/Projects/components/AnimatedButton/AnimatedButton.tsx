@@ -16,10 +16,10 @@ function AnimatedButton({ icon, title, link }: { icon: ReactNode, title: string,
       </div>
       <div
       style={{width: hovered ? buttonRef.current?.offsetWidth || 0 : 0}} 
-      className='overflow-x-hidden transition-all duration-300 ease-out w-max'>
+      className='overflow-x-hidden transition-all duration-300 ease-out'>
         <span 
         ref={buttonRef} 
-        className='hidden xl:block px-1.5 group-hover:text-pal-purple-300'>
+        className='hidden xl:inline px-1.5 group-hover:text-pal-purple-300'>
           {title}
         </span>
       </div>

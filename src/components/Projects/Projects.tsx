@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import useIntersectionObserver from '../../hooks/useIntersectionObserver';
-import { AppWindow, Code, CodeBlock, GithubLogo } from '@phosphor-icons/react';
+import { GithubLogo } from '@phosphor-icons/react';
 import { getGithubStats } from '../../services/github';
 import { GithubStats as GithubStatsModel } from '../../model/Github';
 import GithubStats from './components/GithubStats/GithubStats';
@@ -8,7 +8,7 @@ import Carousel from './components/Carousel/Carousel';
 import { projects } from '../../projects';
 import './Projects.css';
 import { ProjectContext } from '../../context/Project/ProjectContext';
-import AnimatedButton from './components/AnimatedButton/AnimatedButton';
+import ProjectAbout from './components/ProjectAbout/ProjectAbout';
 
 function Projects() {
   const [githubStats, setGithubStats] = useState<GithubStatsModel>();
@@ -46,7 +46,7 @@ function Projects() {
               )
             }
           </Carousel>
-          
+          <ProjectAbout />
         </div>
         <GithubStats 
         isVisible={isVisible!}

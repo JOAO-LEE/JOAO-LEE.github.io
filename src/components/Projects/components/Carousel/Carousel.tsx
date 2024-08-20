@@ -7,11 +7,11 @@ import { ProjectContext } from "../../../../context/Project/ProjectContext";
 function Carousel({ children }: { children: ReactNode[] }) {
   const [ref] = useIntersectionObserver({ threshold: 0.5 });
   const { curr = 0, setCurr, previousSlide, nextSlide } = useContext(ProjectContext);
-  
+
   return (
     <div 
     ref={ref} 
-    className=""
+    className="mx-auto sm:mx-0"
     >
       <div 
       className={`overflow-hidden relative size-64 md:size-[32rem]`}
