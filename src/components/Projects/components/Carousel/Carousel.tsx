@@ -6,52 +6,56 @@ import { ProjectContext } from "../../../../context/Project/ProjectContext";
 
 function Carousel({ children }: { children: ReactNode[] }) {
   const [ref] = useIntersectionObserver({ threshold: 0.5 });
-  const { curr = 0, setCurr, previousSlide, nextSlide } = useContext(ProjectContext)
+  const { curr = 0, setCurr, previousSlide, nextSlide } = useContext(ProjectContext);
+  
   return (
     <div 
     ref={ref} 
-    className="md:min-w-[32rem]"
+    className=""
     >
       <div 
-      className={`overflow-hidden relative size-56 md:size-[32rem]`}
+      className={`overflow-hidden relative size-64 md:size-[32rem]`}
       >
         <div 
-        className='flex transition-transform ease-in-out duration-500' 
+        className="flex transition-transform ease-in-out duration-500" 
         style={{transform: `translateX(-${curr * 100}%)`}}
         >
           {children}
         </div>
         <div 
-        className='absolute inset-0 flex items-center justify-between p-2.5'
+        className="absolute inset-0 flex items-center justify-between p-2.5"
         >
           <button 
           onClick={previousSlide}
-          className='carousel-buttons group'>
+          className="carousel-buttons group"
+          >
             <CaretLeft  
-            weight='thin' 
-            className='carousel-arrows'
+            weight="thin" 
+            className="carousel-arrows"
             />
           </button>
           <button 
           onClick={nextSlide}
-          className='carousel-buttons group'>
+          className="carousel-buttons group"
+          >
             <CaretRight  
-            weight='thin' 
-            className='carousel-arrows'
+            weight="thin" 
+            className="carousel-arrows"
             />
           </button>
         </div>
         <div 
-        className='absolute bottom-4 right-0 left-0'
+        className="absolute bottom-4 right-0 left-0"
         >
           <div 
-          className='flex items-center justify-center gap-2'>
+          className="flex items-center justify-center gap-2"
+          >
             {
               children.map((_, i) => (
                 <div 
                 key={i}
                 onClick={()=> setCurr(curr === i ? curr : i)} 
-                className={`carousel-spy cursor-pointer ${curr === i ? "p-2 border-pal-orange-100" : "bg-opacity-50 border-pal-purple-300 hover:bg-pal-purple-300"}`} 
+                className={`carousel-spy cursor-pointer ${curr === i ? "p-1.5 md:p-2 border-pal-orange-100" : "bg-opacity-50 border-pal-purple-300 hover:bg-pal-purple-300"}`} 
                 />
               ))
             }

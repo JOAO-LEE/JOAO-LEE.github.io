@@ -31,7 +31,7 @@ function Projects() {
         <div className='mx-auto'>
           <h2 className={`${isVisible ? 'projects-title' : "text-transparent"}`}>projects</h2>
         </div>
-        <div className='p-4 flex flex-col sm:flex-row'>
+        <div className=' p-4 flex flex-col sm:flex-row'>
           <Carousel>
             {
               projects
@@ -40,43 +40,26 @@ function Projects() {
                 key={p.id}
                 src={p.image} 
                 alt="" 
-                className='size-56 md:size-[32rem] object-contain rounded-xl lg:rounded-3xl'
+                className='size-64 md:size-[32rem] object-contain rounded-xl lg:rounded-3xl'
                 />
                 )   
               )
             }
           </Carousel>
-          <div className="p-4 space-y-4 text-sm">
-            <h3 className='text-2xl lg:text-7xl'>{projects[curr].name}</h3>
-            <article className=''>
-              <p className=''>{projects[curr].description}</p> 
-            </article>
-            <div className='bg-black flex gap-2'>
-              <AnimatedButton 
-              icon={
-                <AppWindow />
-              } 
-              title='app' 
-              />
-               <AnimatedButton 
-              icon={
-                <CodeBlock />
-              } 
-              title='repository' 
-              />
-            </div>
-          </div>
+          
         </div>
         <GithubStats 
-        isVisible={isVisible!} x
+        isVisible={isVisible!}
         githubStats={githubStats!}
         />
         <a 
         className={`${isVisible ? "github-logo" : ""} self-end content-end p-2  flex gap-2 group transition-colors duration-500 delay-[150ms] items-center`} 
         href={githubStats?.html_url} 
-        target='_blank'>
+        target='_blank'
+        >
           <p 
-          className='hidden lg:block opacity-0 font-light text-grayish transition-all duration-500 delay-75 text-sm group-hover:opacity-100 group-hover:font-semibold hover:text-pal-orange-200 hover:bg-pal-purple-500 p-2 rounded-xl'>
+          className='hidden lg:block opacity-0 font-light text-grayish transition-all duration-500 delay-75 text-sm group-hover:opacity-100 group-hover:font-semibold hover:text-pal-orange-200 hover:bg-pal-purple-500 p-2 rounded-xl'
+          >
             check my profile!
           </p>
           <GithubLogo 
@@ -91,8 +74,3 @@ function Projects() {
 }
 
 export default Projects;
-
-{/* <button className=''>
-<div>
-
-<button className='p-2'><Code /> <a>repository</a></button> */}

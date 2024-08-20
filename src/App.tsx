@@ -11,14 +11,14 @@ import { projects } from './projects';
 function App() {
   return (
     <>
-    <ProjectProvider slides={projects}>
-      <Header />
-      <Main>
-        <Intro />
-        <About />
-        <Projects/>
-      </Main>
-      </ProjectProvider>
+      <ProjectProvider slides={projects}>
+        <Header />
+        <Main>
+          <Intro />
+          <About />
+          <Projects/>
+        </Main>
+        </ProjectProvider>
     </>
   )
 }
