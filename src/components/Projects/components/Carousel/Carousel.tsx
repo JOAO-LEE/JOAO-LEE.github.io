@@ -1,8 +1,8 @@
 import { CaretLeft, CaretRight } from "@phosphor-icons/react";
 import { ReactNode, useContext, useEffect } from "react";
 import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
-import "./Carousel.css";
 import { ProjectContext } from "../../../../context/Project/ProjectContext";
+import "./Carousel.css";
 
 function Carousel({ children }: { children: ReactNode[] }) {
   const [ref] = useIntersectionObserver({ threshold: 0.5 });
