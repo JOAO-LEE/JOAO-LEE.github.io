@@ -14,7 +14,7 @@ function About() {
         className="inner-heading" 
         ref={ref}
         >
-          <h2 className={`heading ${isVisible ? 'animate-heading-up' : ''}`}>
+          <h2 className={`heading ${isVisible ? "animate-heading-up" : ""}`}>
             &nbsp; <br />
             about
           </h2>
