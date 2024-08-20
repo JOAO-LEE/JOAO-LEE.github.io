@@ -11,6 +11,7 @@ import "./Projects.css";
 import AnimatedButton from "./components/AnimatedButton/AnimatedButton";
 import { ProjectContext } from "../../context/Project/ProjectContext";
 import TechStackList from "./components/TechStackList/TechStackList";
+import GithubIconLink from "./components/Github/GithubIconLink/GithubIconLink";
 
 function Projects() {
   const [githubStats, setGithubStats] = useState<GithubStatsModel>();
@@ -56,7 +57,7 @@ function Projects() {
         isVisible={isVisible!}
         githubStats={githubStats!}
         />
-      
+        <GithubIconLink htmlUrl={githubStats?.html_url}/>
       </div>
     </section>
   )

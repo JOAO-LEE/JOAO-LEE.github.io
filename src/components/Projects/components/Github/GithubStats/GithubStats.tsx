@@ -1,4 +1,4 @@
-import { GithubStats as GithubStatsModel } from "../../../../model/Github";
+import { GithubStats as GithubStatsModel } from "../../../../../model/Github";
 
 function GithubStats({ isVisible, githubStats }: { isVisible: boolean | React.MutableRefObject<null>, githubStats: GithubStatsModel }) {
 
