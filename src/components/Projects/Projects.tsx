@@ -11,6 +11,7 @@ import { ProjectContext } from "../../context/Project/ProjectContext";
 import TechStackList from "./components/TechStackList/TechStackList";
 import GithubIconLink from "./components/Github/GithubIconLink/GithubIconLink";
 import "./Projects.css";
+import Project from "./components/Project/Project";
 
 function Projects() {
   const [githubStats, setGithubStats] = useState<GithubStatsModel>();
@@ -28,10 +29,21 @@ function Projects() {
   return (
     <section 
     ref={ref} 
-    className="bg-pal-purple-600 h-screen">
+    className="bg-pal-purple-600 h-[200vh]">
       <div className="flex flex-col h-full">
         <div className="mx-auto">
           <h2 className={`${isVisible ? "projects-title" : "text-transparent"}`}>projects</h2>
+        </div>
+        <div className="w-11/12 lg:h-1/2 border border-pal-orange-100 rounded-xl p-4 flex flex-col lg:flex-row gap-2 mx-auto">
+          {
+            projects.map((project, index) => (
+              <Project
+              index={index} 
+              key={index} 
+              project={project}
+              />
+            ))
+          }
         </div>
         <GithubStats
         isVisible={isVisible} 
@@ -41,7 +53,7 @@ function Projects() {
         htmlUrl={githubStats?.html_url} 
         isVisible={isVisible}
         />
-      </div>
+        </div>
     </section>
   )
 }

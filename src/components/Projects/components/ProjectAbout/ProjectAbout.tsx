@@ -10,23 +10,15 @@ function ProjectAbout() {
     <div 
     className="px-4 space-y-1 text-xs md:text-sm"
     >
-      <h3 
+      {/* <h3 
       className="text-lg lg:text-5xl"
       >
         {projects[curr].name}
-      </h3>
-      <article 
-      className=""
-      >
-        <p 
-        className="text-[0.7rem] md:text-lg"
-        >
-          {projects[curr].description}
-        </p> 
-      </article>
-      <div className="hidden sm:block">
+      </h3> */}
+    
+      {/* <div className="hidden sm:block">
         <TechStackList />
-      </div>
+      </div> */}
     </div>
   )
 }
