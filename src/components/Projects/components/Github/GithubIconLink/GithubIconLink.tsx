@@ -1,11 +1,11 @@
 import { GithubLogo } from "@phosphor-icons/react"
 import useIntersectionObserver from "../../../../../hooks/useIntersectionObserver";
 
-function GithubIconLink({ htmlUrl }: { htmlUrl: string | undefined }) {
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+function GithubIconLink({ htmlUrl, isVisible }: { htmlUrl: string | undefined, isVisible: boolean }) {
+  // const [isVisible] = useIntersectionObserver({ threshold: 0.5 });
   return (
     <a
-    ref={ref} 
+    // ref={ref} 
     className={`${isVisible ? "github-logo" : ""} self-end content-end p-2 flex gap-2 group transition-colors duration-500 delay-[150ms] items-center`} 
     href={htmlUrl} 
     target="_blank"

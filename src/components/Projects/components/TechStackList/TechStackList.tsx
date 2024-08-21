@@ -6,10 +6,11 @@ import { ProjectContext } from "../../../../context/Project/ProjectContext";
 
 function TechStackList() {
   const {curr = 0 } = useContext(ProjectContext);
+
   return (
     <div className="space-y-2">
       <ul 
-      className="flex gap-1 lowercase text-xs flex-wrap justify-center"
+      className="flex gap-1 lowercase text-[0.6rem] md:text-xs flex-wrap"
       >
         {
           projects[curr].techStack
@@ -30,15 +31,19 @@ function TechStackList() {
         link={projects[curr].applicationUrl} 
         title="app" 
         icon={
-          <AppWindow />
-        } 
+          <AppWindow 
+          className="size-5 xl:size-max" 
+          />
+        }
         />
         <AnimatedButton
         link={projects[curr].githubRepository} 
         title="repository"
         icon={
-          <CodeBlock />
-        } 
+          <CodeBlock 
+          className="size-5 xl:size-max" 
+          />
+        }
         />
       </div>
     </div>

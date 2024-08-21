@@ -1,12 +1,11 @@
 import { useContext } from "react"
 import { projects } from "../../../../projects"
 import { ProjectContext } from "../../../../context/Project/ProjectContext"
-import AnimatedButton from "../AnimatedButton/AnimatedButton";
-import { AppWindow, CodeBlock } from "@phosphor-icons/react";
 import TechStackList from "../TechStackList/TechStackList";
 
 function ProjectAbout() {
   const { curr = 0 } = useContext(ProjectContext);
+
   return (
     <div 
     className="px-4 space-y-1 text-xs md:text-sm"
@@ -16,15 +15,16 @@ function ProjectAbout() {
       >
         {projects[curr].name}
       </h3>
-      <article className="">
+      <article 
+      className=""
+      >
         <p 
-        className="text-xs md:text-lg"
+        className="text-[0.7rem] md:text-lg"
         >
           {projects[curr].description}
         </p> 
       </article>
-      <div className="hidden xl:block">
-
+      <div className="hidden sm:block">
         <TechStackList />
       </div>
     </div>

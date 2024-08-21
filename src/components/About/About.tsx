@@ -2,7 +2,7 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 import "./About.css";
 
 function About() {
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.5 });
+  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
 
   return (
     <section 

@@ -9,7 +9,7 @@ function AnimatedButton({ icon, title, link }: { icon: ReactNode, title: string,
     onMouseLeave={() => setHovered(false)} 
     href={link}
     target="_blank" 
-    className="p-2 flex items-center rounded-lg text-grayish bg-pal-orange-100 group">
+    className="p-1 flex items-center rounded-lg text-grayish bg-pal-orange-100 group">
       <div className="flex items-center gap-2 2xl:block text-3xl group-hover:text-pal-purple-400">
         {icon}
         <span className="text-xs xl:hidden">{title}</span>
