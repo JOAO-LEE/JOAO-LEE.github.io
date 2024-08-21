@@ -11,7 +11,7 @@ function TechStackList() {
     <div className="space-y-2">
    
       <div 
-      className="flex gap-2 justify-center"
+      className="flex gap-2"
       >
         <AnimatedButton
         link={projects[curr].applicationUrl} 

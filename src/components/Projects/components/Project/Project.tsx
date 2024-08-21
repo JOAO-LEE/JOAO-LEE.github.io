@@ -5,10 +5,10 @@ import TechStackList from "../TechStackList/TechStackList"
 function Project({ project, index }: { project: ProjectModel, index: number }) {
   return (
     <div 
-    className="bg-black/30 hover:bg-black/60 transition-all duration-500  h-full w-full rounded-xl p-4"
+    className="bg-black/30 hover:bg-black/60 transition-all duration-500 w-full rounded-xl p-4"
     >
       <div 
-      className="flex justify-between"
+      className="flex flex-col lg:flex-row lg:justify-between lg:items-center"
       >
         <p 
         className="text-4xl text-pal-orange-100"
@@ -17,34 +17,35 @@ function Project({ project, index }: { project: ProjectModel, index: number }) {
         </p>
         <TechStackList />
       </div>
-      <div className="flex flex-col md:flex-row gap-2">
+      <div className="flex gap-2">
         <img 
         src={project.image} 
         alt="" 
-        className="size-28 md:size-64 object-contain" 
+        className="size-28 md:size-64 object-contain rounded-lg" 
         />
+        <div className="flex flex-col justify-around">
           <p 
-          className="text-[0.7rem]"
-          >
-            {project.description}
-          </p> 
-
+            className="text-[0.7rem] md:text-sm"
+            >
+              {project.description}
+            </p> 
+            <ul 
+        className="flex gap-1 lowercase text-[0.6rem] md:text-xs flex-wrap"
+        >
+          {
+            project.techStack
+              .map((tech, i) => (
+                <li 
+                key={i}
+                className="bg-pal-orange-100 p-1 rounded-xl text-pal-purple-800 hover:text-grayish transition duration-500"
+                >
+                  #{tech}
+                </li>
+            ))
+          }
+        </ul>
+        </div>
       </div>
-      <ul 
-      className="flex gap-1 lowercase text-[0.6rem] md:text-xs flex-wrap"
-      >
-        {
-          project.techStack
-            .map((tech, i) => (
-              <li 
-              key={i}
-              className="bg-pal-orange-100 p-1 rounded-xl text-pal-purple-800 hover:text-grayish transition duration-500"
-              >
-                #{tech}
-              </li>
-          ))
-        }
-      </ul>
     </div>
   )
 }

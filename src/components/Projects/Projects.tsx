@@ -29,12 +29,14 @@ function Projects() {
   return (
     <section 
     ref={ref} 
-    className="bg-pal-purple-600 h-[200vh]">
+    className="bg-pal-purple-600">
       <div className="flex flex-col h-full">
         <div className="mx-auto">
           <h2 className={`${isVisible ? "projects-title" : "text-transparent"}`}>projects</h2>
         </div>
-        <div className="w-11/12 lg:h-1/2 border border-pal-orange-100 rounded-xl p-4 flex flex-col lg:flex-row gap-2 mx-auto">
+        <div 
+        className="lg:w-4/6  rounded-xl p-4 flex flex-col lg:flex-row gap-2 mx-auto"
+        >
           {
             projects.map((project, index) => (
               <Project
@@ -46,8 +48,8 @@ function Projects() {
           }
         </div>
         <GithubStats
-        isVisible={isVisible} 
         githubStats={githubStats!}
+        isVisible={isVisible} 
         />
         <GithubIconLink 
         htmlUrl={githubStats?.html_url} 

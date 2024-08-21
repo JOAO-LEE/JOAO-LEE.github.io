@@ -1,6 +1,6 @@
 import { GithubLogo } from "@phosphor-icons/react";
 
-function GithubIconLink({ htmlUrl, isVisible }: { htmlUrl: string | undefined, isVisible: boolean }) {
+function GithubIconLink({ htmlUrl, isVisible }: { htmlUrl: string | undefined, isVisible: boolean | React.MutableRefObject<null> }) {
   return (
 
       <a
