@@ -2,6 +2,7 @@
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  /* position: relative */
 }
 
 .main-content::-webkit-scrollbar {

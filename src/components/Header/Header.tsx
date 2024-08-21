@@ -44,7 +44,7 @@ export function Header() {
         </nav>
       </div>
       <header 
-      className="flex justify-between items-center p-4 sticky top-0 bg-transparent"
+      className="flex justify-between items-center p-4 fixed w-full top-0 bg-black/10 backdrop-blur-sm"
       >
         <List 
         size={32} 

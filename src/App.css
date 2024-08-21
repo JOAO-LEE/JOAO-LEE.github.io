@@ -35,11 +35,12 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  position: relative;
+  background-color: #00061d;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   color: var(--grayish);
 }
+
 
 body::-webkit-scrollbar {
   display: none;
