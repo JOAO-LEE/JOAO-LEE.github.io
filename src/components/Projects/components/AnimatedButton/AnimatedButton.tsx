@@ -10,7 +10,7 @@ function AnimatedButton({ icon, title, link }: { icon: ReactNode, title: string,
     href={link}
     target="_blank" 
     className="p-1 flex items-center rounded-lg text-grayish bg-pal-orange-100 group">
-      <div className="flex items-center gap-2 2xl:block text-3xl group-hover:text-pal-purple-400">
+      <div className="flex items-center gap-2 2xl:block text-3xl">
         {icon}
         <span className="text-xs xl:hidden">{title}</span>
       </div>
@@ -19,7 +19,7 @@ function AnimatedButton({ icon, title, link }: { icon: ReactNode, title: string,
       className="overflow-x-hidden transition-all duration-300 ease-out">
         <span 
         ref={buttonRef} 
-        className="hidden xl:inline px-1.5 group-hover:text-pal-purple-300">
+        className="hidden xl:inline px-1.5 ">
           {title}
         </span>
       </div>

@@ -1,6 +1,8 @@
 .projects-title {
-  position: relative;
+  position: relative; /* Adiciona contexto de empilhamento */
+  z-index: 20; /* Certifique-se que seja maior que o z-index do header */
   color: transparent;
+  
   z-index: 1;
   display: inline-block;
   font-size: 45px;

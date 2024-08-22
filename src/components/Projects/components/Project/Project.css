@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .project-name {
+    @apply relative cursor-pointer duration-500
+  }
+  
+   .project-name::after {
+    @apply content-[''] bg-pal-purple-100 h-[3px] absolute w-[0%] left-0 -bottom-[5px] duration-[750ms] ease-in-out
+  }
+
+  .project-name-sub {
+    @apply w-[100%] bg-grayish
+  }
+}

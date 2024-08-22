@@ -23,7 +23,7 @@ export function Header() {
     <>
       <div 
       ref={menuRef} 
-      className={`menu ${open ? "open" : "close"} lg:hidden h-1/2 backdrop-blur-md text-white w-full`}
+      className={`menu ${open ? "open" : "close"} lg:hidden h-full backdrop-blur-lg text-white w-full`}
       >
         <X 
         className={`size-10 ${open ? "x-open" : "x-close"}`} 
@@ -44,7 +44,7 @@ export function Header() {
         </nav>
       </div>
       <header 
-      className="flex justify-between items-center p-4 fixed w-full top-0 bg-black/10 backdrop-blur-sm"
+      className="flex justify-between items-center p-4 fixed w-full top-0  backdrop-blur-md"
       >
         <List 
         size={32} 

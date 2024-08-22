@@ -1,48 +1,51 @@
 import { Project as ProjectModel } from "../../../../model/Project"
-import ProjectAbout from "../ProjectAbout/ProjectAbout"
-import TechStackList from "../TechStackList/TechStackList"
+import ProjectActions from "../ProjectActions/ProjectActions"
+import "./Project.css";
 
 function Project({ project, index }: { project: ProjectModel, index: number }) {
   return (
     <div 
-    className="bg-black/30 hover:bg-black/60 transition-all duration-500 w-full rounded-xl p-4"
+    className="bg-black/30 hover:bg-black/60 transition-all duration-500 w-full rounded-xl p-4 space-y-2 group hover:scale-[1.02] shadow-xl hover:shadow-2xl"
     >
       <div 
-      className="flex flex-col lg:flex-row lg:justify-between lg:items-center"
+      className="flex justify-between items-center space-y-2"
       >
         <p 
-        className="text-4xl text-pal-orange-100"
+        className="text-lg 2xl:text-3xl text-grayish group-hover:text-pal-orange-100 project-name group-hover:after:project-name-sub transition-all duration-500"
         >
           {project.name}
         </p>
-        <TechStackList />
+        <ProjectActions 
+        applicationUrl={project.applicationUrl} 
+        githubRepository={project.githubRepository} 
+        />
       </div>
       <div className="flex gap-2">
         <img 
         src={project.image} 
         alt="" 
-        className="size-28 md:size-64 object-contain rounded-lg" 
+        className="size-32 sm:size-36 md:size-48 lg:size-60 object-contain rounded-lg" 
         />
-        <div className="flex flex-col justify-around">
+        <div className="flex flex-col text-justify gap-3">
           <p 
-            className="text-[0.7rem] md:text-sm"
+            className="text-xs sm:text-sm"
             >
               {project.description}
             </p> 
             <ul 
-        className="flex gap-1 lowercase text-[0.6rem] md:text-xs flex-wrap"
-        >
-          {
-            project.techStack
-              .map((tech, i) => (
-                <li 
-                key={i}
-                className="bg-pal-orange-100 p-1 rounded-xl text-pal-purple-800 hover:text-grayish transition duration-500"
-                >
-                  #{tech}
-                </li>
-            ))
-          }
+            className="flex gap-1 lowercase text-[0.6rem] md:text-xs flex-wrap"
+            >
+              {
+                project.techStack
+                  .map((tech, i) => (
+                    <li 
+                    key={i}
+                    className="bg-pal-orange-100 p-1 rounded-xl text-pal-purple-800 hover:text-grayish transition duration-500"
+                    >
+                      #{tech}
+                    </li>
+                ))
+              }
         </ul>
         </div>
       </div>

@@ -8,7 +8,7 @@ import Carousel from "./components/Carousel/Carousel";
 import { projects } from "../../projects";
 import ProjectAbout from "./components/ProjectAbout/ProjectAbout";
 import { ProjectContext } from "../../context/Project/ProjectContext";
-import TechStackList from "./components/TechStackList/TechStackList";
+import TechStackList from "./components/ProjectActions/TechStackList";
 import GithubIconLink from "./components/Github/GithubIconLink/GithubIconLink";
 import "./Projects.css";
 import Project from "./components/Project/Project";
@@ -16,8 +16,7 @@ import Project from "./components/Project/Project";
 function Projects() {
   const [githubStats, setGithubStats] = useState<GithubStatsModel>();
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
-  // const {curr = 0 } = useContext(ProjectContext)
-
+  
   useEffect(() => {
     const fetchGithubStats = async () => {
       const searchedGithubStats = await getGithubStats();
@@ -29,13 +28,13 @@ function Projects() {
   return (
     <section 
     ref={ref} 
-    className="bg-pal-purple-600">
+    className="bg-pal-purple-600 h-[200vh]">
       <div className="flex flex-col h-full">
         <div className="mx-auto">
           <h2 className={`${isVisible ? "projects-title" : "text-transparent"}`}>projects</h2>
         </div>
         <div 
-        className="lg:w-4/6  rounded-xl p-4 flex flex-col lg:flex-row gap-2 mx-auto"
+        className="2xl:w-4/6 rounded-xl p-4 flex flex-col lg:flex-row gap-2 mx-auto"
         >
           {
             projects.map((project, index) => (

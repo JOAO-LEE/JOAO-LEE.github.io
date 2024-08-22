@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { projects } from "../../../../projects"
 import { ProjectContext } from "../../../../context/Project/ProjectContext"
-import TechStackList from "../TechStackList/TechStackList";
+import TechStackList from "../ProjectActions/TechStackList";
 
 function ProjectAbout() {
   const { curr = 0 } = useContext(ProjectContext);
