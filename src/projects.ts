@@ -1,5 +1,6 @@
 import xCloneImage from './images/x-clone.png';
 import googleCloneImage from './images/google-clone.png';
+import { Project } from './model/Project';
 
 export const projects: Array<Project> = [
   {
