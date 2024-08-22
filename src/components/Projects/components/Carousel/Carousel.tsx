@@ -1,5 +1,5 @@
 import { CaretLeft, CaretRight } from "@phosphor-icons/react";
-import { ReactNode, useContext, useEffect } from "react";
+import { ReactNode, useContext } from "react";
 import useIntersectionObserver from "../../../../hooks/useIntersectionObserver";
 import { ProjectContext } from "../../../../context/Project/ProjectContext";
 import "./Carousel.css";

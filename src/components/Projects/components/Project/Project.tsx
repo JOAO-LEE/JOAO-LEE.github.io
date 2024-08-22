@@ -3,8 +3,10 @@ import ProjectActions from "../ProjectActions/ProjectActions"
 import "./Project.css";
 
 function Project({ project, index }: { project: ProjectModel, index: number }) {
+  // let i = index;
   return (
-    <div 
+    <div
+    key={index} 
     className="bg-black/30 hover:bg-black/60 transition-all duration-500 w-full rounded-xl p-4 space-y-2 group hover:scale-[1.02] shadow-xl hover:shadow-2xl"
     >
       <div 

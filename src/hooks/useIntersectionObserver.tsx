@@ -5,6 +5,7 @@ const useIntersectionObserver = ({ threshold = 0.1 }) => {
   const ref = useRef(null);
 
   useEffect(() => {
+    let observerRefValue = null;
     const observer = new IntersectionObserver(
       ([entry]) => setIsVisible(entry.isIntersecting),
       { threshold }
@@ -12,11 +13,12 @@ const useIntersectionObserver = ({ threshold = 0.1 }) => {
 
     if (ref.current) {
       observer.observe(ref.current);
+      observerRefValue = ref.current;
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (observerRefValue) {
+        observer.unobserve(observerRefValue);
       }
     };
   }, [threshold]);
