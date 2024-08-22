@@ -12,7 +12,7 @@ function About() {
       <div className="outer-heading">
         <div 
         className="inner-heading" 
-        ref={ref}
+        // ref={ref}
         >
           <h2 className={`heading ${isVisible ? "animate-heading-up" : ""}`}>
             &nbsp; <br />
