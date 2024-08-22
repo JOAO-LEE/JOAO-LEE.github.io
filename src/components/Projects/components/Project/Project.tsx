@@ -20,33 +20,35 @@ function Project({ project, index }: { project: ProjectModel, index: number }) {
         githubRepository={project.githubRepository} 
         />
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-2 p-1">
         <img 
         src={project.image} 
         alt="" 
         className="size-32 sm:size-36 md:size-48 lg:size-60 object-contain rounded-lg" 
         />
         <div className="flex flex-col text-justify gap-3">
-          <p 
-            className="text-xs sm:text-sm"
-            >
-              {project.description}
-            </p> 
-            <ul 
-            className="flex gap-1 lowercase text-[0.6rem] md:text-xs flex-wrap"
-            >
-              {
-                project.techStack
-                  .map((tech, i) => (
-                    <li 
-                    key={i}
-                    className="bg-pal-orange-100 p-1 rounded-xl text-pal-purple-800 hover:text-grayish transition duration-500"
-                    >
-                      #{tech}
-                    </li>
-                ))
-              }
-        </ul>
+          <div className="min-h-[50%]">
+            <p 
+              className="text-xs sm:text-sm"
+              >
+                {project.description}
+              </p> 
+          </div>
+          <ul 
+          className="flex gap-1 lowercase text-[0.6rem] md:text-xs flex-wrap"
+          >
+            {
+              project.techStack
+                .map((tech, i) => (
+                  <li 
+                  key={i}
+                  className="bg-pal-orange-100 p-1 rounded-xl text-pal-purple-800 hover:text-grayish transition duration-500"
+                  >
+                    #{tech}
+                  </li>
+              ))
+            }
+          </ul>
         </div>
       </div>
     </div>
